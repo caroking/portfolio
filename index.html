@@ -1,91 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroline King Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Caroline King</h1>
+            <p>Photographer | Filmmaker | Programmer</p>
+        </header>
+
+        <section class="collage">
+            <div id="photo1" class="photo"></div>
+            <div id="photo2" class="photo"></div>
+            <div id="photo3" class="photo"></div>
+            <div class="text-box">
+                Welcome to my world of images, film, and creativity.
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+And here’s your styles.css file again:
+
+css
+Copy
+Edit
 /* GENERAL STYLES */
-body {
-    background-color: #f5f5f5;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+body { 
+    background-color: #f5f5f5; 
+    font-family: 'Arial', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    overflow-x: hidden; 
 }
 
-.container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+.container { 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding: 20px; 
 }
 
-header {
-    margin-bottom: 40px;
+header { 
+    margin-bottom: 40px; 
 }
 
-h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
+h1 { 
+    font-size: 3rem; 
+    font-weight: bold; 
+    text-transform: uppercase; 
 }
 
-p {
-    font-size: 1.2rem;
-    color: #555;
+p { 
+    font-size: 1.2rem; 
+    color: #555; 
 }
 
 /* COLLAGE SECTION */
-.collage {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 200px);
-    gap: 10px;
-    width: 90%;
-    max-width: 1000px;
-    position: relative;
+.collage { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 200px); 
+    gap: 10px; 
+    width: 90%; 
+    max-width: 1000px; 
+    position: relative; 
 }
 
-.photo {
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+.photo { 
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
 }
 
-#photo1 {
-    background-image: url('yourphoto1.jpg');
-    grid-column: 1 / 3;
+#photo1 { 
+    background-image: url('yourphoto1.jpg'); 
+    grid-column: 1 / 3; 
 }
 
-#photo2 {
-    background-image: url('yourphoto2.jpg');
-    grid-column: 3 / 4;
-    grid-row: 1 / 3;
+#photo2 { 
+    background-image: url('yourphoto2.jpg'); 
+    grid-column: 3 / 4; 
+    grid-row: 1 / 3; 
 }
 
-#photo3 {
-    background-image: url('yourphoto3.jpg');
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+#photo3 { 
+    background-image: url('yourphoto3.jpg'); 
+    grid-column: 1 / 2; 
+    grid-row: 2 / 3; 
 }
 
-.text-box {
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 20px;
-    font-size: 1.5rem;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 8px;
-    width: 60%;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+.text-box { 
+    background: rgba(0, 0, 0, 0.7); 
+    color: white; 
+    padding: 20px; 
+    font-size: 1.5rem; 
+    position: absolute; 
+    bottom: -10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    border-radius: 8px; 
+    width: 60%; 
+    text-align: center; 
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
 }
 
-.collage:hover .text-box {
-    opacity: 1;
+.collage:hover .text-box { 
+    opacity: 1; 
 }
 
-.photo:hover {
-    transform: scale(1.05);
+.photo:hover { 
+    transform: scale(1.05); 
 }
