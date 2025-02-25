@@ -15,7 +15,6 @@ background-size: cover;
     align-items: center; 
     justify-content: center;
 } 
-
 .container {
     position: absolute;
     top: 20px;  /* Distance from the top */
@@ -27,7 +26,6 @@ background-size: cover;
     border-radius: 10px;
     max-width: 400px; /* Optional: limits width to keep it neat */
 }
-
 h1 { 
     font-size: 3rem; 
     font-weight: bold; 
