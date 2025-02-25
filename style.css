@@ -18,13 +18,15 @@ background-size: cover;
 
 .container {
     position: absolute;
-    top: 70%; /* Move it down (adjust as needed) */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Keeps it centered */
+    top: 20px;  /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    transform: none; /* Remove centering effect */
+    text-align: left; /* Align text to the left */
     background: rgba(0, 0, 0, 0.5); 
     padding: 20px; 
     border-radius: 10px;
-} 
+    max-width: 400px; /* Optional: limits width to keep it neat */
+}
 
 h1 { 
     font-size: 3rem; 
