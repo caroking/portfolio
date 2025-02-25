@@ -1,6 +1,7 @@
 /* GENERAL STYLES */
 body { 
-    background-color: #5BF57B;
+    background: url('homepage1.jpg') no-repeat center center fixed;
+background-size: cover;
     background-size: cover; 
     background-position: center; 
     background-attachment: fixed; /* Keeps it in place while scrolling */
