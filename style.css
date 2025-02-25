@@ -1,31 +1,25 @@
 /* GENERAL STYLES */
 body { 
     background: url('homepage1.jpg') no-repeat center center fixed;
-background-size: cover;
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed; /* Keeps it in place while scrolling */
+    background-size: cover;  
     font-family: 'Arial', sans-serif; 
     margin: 0; 
     padding: 0; 
     color: white; /* Ensures text is visible on the image */
-    text-align: center; 
     height: 100vh; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
 } 
+
 .container {
     position: absolute;
     top: 20px;  /* Distance from the top */
     left: 20px; /* Distance from the left */
-    transform: none; /* Remove centering effect */
     text-align: left; /* Align text to the left */
     background: rgba(0, 0, 0, 0.5); 
     padding: 20px; 
     border-radius: 10px;
     max-width: 400px; /* Optional: limits width to keep it neat */
 }
+
 h1 { 
     font-size: 3rem; 
     font-weight: bold; 
@@ -37,4 +31,4 @@ p {
     font-size: 1.2rem; 
     color: #f0f0f0; 
     margin: 10px 0; 
-} 
+}  
