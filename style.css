@@ -16,10 +16,14 @@ background-size: cover;
     justify-content: center;
 } 
 
-.container { 
-    background: rgba(0, 0, 0, 0.5); /* Adds a subtle dark overlay */
+.container {
+    position: absolute;
+    top: 70%; /* Move it down (adjust as needed) */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Keeps it centered */
+    background: rgba(0, 0, 0, 0.5); 
     padding: 20px; 
-    border-radius: 10px; 
+    border-radius: 10px;
 } 
 
 h1 { 
