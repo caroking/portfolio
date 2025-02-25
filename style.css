@@ -1,6 +1,6 @@
 /* GENERAL STYLES */
 body { 
-    background-image: url('https://github.com/caroking/portfolio/blob/7e29e1aa54449169f50cf758576321456e962264/homepage1.jpg'); /* This makes it the background */
+    background-image: url('homepage1.jpg'); /* This makes it the background */
     background-size: cover; 
     background-position: center; 
     background-attachment: fixed; /* Keeps it in place while scrolling */
