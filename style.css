@@ -16,10 +16,11 @@ body {
     text-align: center;
     margin-top: 20px; /* Moves it down a little from the very top */
 }
+/* Text box for Filmmaker | Photographer | Programmer */
 .container {
     position: absolute;
     top: 50%;  /* Moves it halfway down */
-    left: 20px; /* Stays on the left side */
+    left: 10%; /* Moves it to the left */
     transform: translateY(-50%); /* Centers it vertically */
     text-align: left;
     background: rgba(0, 0, 0, 0.5); 
