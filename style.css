@@ -11,13 +11,14 @@ body {
 
 .container {
     position: absolute;
-    top: 20px;  /* Distance from the top */
-    left: 20px; /* Distance from the left */
-    text-align: left; /* Align text to the left */
+    top: 50%;  /* Moves it halfway down */
+    left: 20px; /* Stays on the left side */
+    transform: translateY(-50%); /* Centers it vertically */
+    text-align: left;
     background: rgba(0, 0, 0, 0.5); 
     padding: 20px; 
     border-radius: 10px;
-    max-width: 400px; /* Optional: limits width to keep it neat */
+    max-width: 400px;
 }
 
 h1 { 
