@@ -5,45 +5,43 @@ body {
     font-family: 'Arial', sans-serif; 
     margin: 0; 
     padding: 0; 
-    color: white; /* Ensures text is visible on the image */
+    color: white;
     height: 100vh; 
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: flex-start; /* Keep text near the top */
-    text-align: center;
-} 
+    flex-direction: column;
+    align-items: center;
+}
 
 /* Huge Name Centered at the Top */
 .hero-text {
-    font-size: 8rem;  /* Adjust size as needed */
+    font-size: 8rem;  
     font-weight: bold;
     text-transform: uppercase;
-    margin-top: 50px; /* Moves it down a little */
+    text-align: center;
+    margin-top: 20px;
 }
 
-/* Text box for Filmmaker | Photographer | Programmer */
+/* Make Name Clickable */
+.hero-text a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.hero-text a:hover {
+    color: #5BF57B; /* Changes color on hover */
+    text-decoration: underline;
+}
+
+/* Text Box for Filmmaker | Photographer | Programmer */
 .container {
     position: absolute;
-    top: 50%;  /* Moves it halfway down */
+    top: 50%;  
     left: 10%; /* Moves it to the left */
-    transform: translateY(-50%); /* Centers it vertically */
+    transform: translateY(-50%); 
     text-align: left;
     background: rgba(0, 0, 0, 0.5); 
     padding: 20px; 
     border-radius: 10px;
     max-width: 400px;
 }
-
-h1 { 
-    font-size: 3rem; 
-    font-weight: bold; 
-    text-transform: uppercase; 
-    margin: 0; 
-} 
-
-p { 
-    font-size: 1.2rem; 
-    color: #f0f0f0; 
-    margin: 10px 0; 
-}  
