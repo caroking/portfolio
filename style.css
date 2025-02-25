@@ -8,7 +8,14 @@ body {
     color: white; /* Ensures text is visible on the image */
     height: 100vh; 
 } 
-
+/* Huge Name Centered at the Top */
+.hero-text {
+    font-size: 8rem;  /* Adjust size as needed */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px; /* Moves it down a little from the very top */
+}
 .container {
     position: absolute;
     top: 50%;  /* Moves it halfway down */
