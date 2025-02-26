@@ -54,6 +54,7 @@ body {
 
 .about-container {
     display: flex;
+     flex-direction: row-reverse; /* Flips the order: text on the left, image on the right */
     justify-content: center; /* Centers everything horizontally */
     align-items: center; /* Centers everything vertically */
     height: 100vh; /* Makes sure the container fills the full screen height */
