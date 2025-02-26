@@ -68,5 +68,5 @@ body {
 
 .about-container p {
     max-width: 400px; /* Keeps text from stretching too wide */
-    text-align: left; /* Aligns text to the left */
+    text-align: right; /* Aligns text to the left */
 }
