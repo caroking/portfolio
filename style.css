@@ -52,17 +52,21 @@ body {
     padding: 50px;
 }
 
-.headshot {
-    width: 200px; /* Set a fixed width */
-    height: 200px; /* Force it to be a square */
-    object-fit: cover; /* This will crop the image to fit within the square */
-    margin-bottom: 20px; /* Adds space below the image */
-}
-/* Centers image and text on About Page */
 .about-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centers vertically */
-    align-items: center; /* Centers horizontally */
-    height: 100vh; /* Makes sure it takes up the full screen height */
+    justify-content: center; /* Centers everything horizontally */
+    align-items: center; /* Centers everything vertically */
+    height: 100vh; /* Makes sure the container fills the full screen height */
+    gap: 40px; /* Adds space between the image and text */
+}
+
+.headshot {
+    width: 200px; 
+    height: 200px;
+    object-fit: cover; 
+}
+
+.about-container p {
+    max-width: 400px; /* Keeps text from stretching too wide */
+    text-align: left; /* Aligns text to the left */
 }
