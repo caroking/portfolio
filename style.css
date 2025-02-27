@@ -38,8 +38,8 @@ body {
 /* Text Box for Filmmaker | Photographer | Programmer */
 .container {
     position: absolute;
-    bottom: 30%; /* Moves it higher to overlay the black shirt */
-    left: 50%; /* Centers it */
+    bottom: 15%; /* Moves it lower to overlay the shirt */
+    left: 50%; /* Centers it horizontally */
     transform: translateX(-50%); /* Ensures perfect centering */
     text-align: center;
     background: rgba(0, 0, 0, 0.7); /* Darkened for better contrast */
