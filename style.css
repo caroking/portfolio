@@ -19,7 +19,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 50, 0, 0.6); /* Dark green shadow for better contrast */
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
     transition: text-shadow 0.3s ease-in-out;
 }
 
@@ -32,18 +32,18 @@ body {
 
 .hero-text a:hover {
     color: #5BF57B; /* Green shimmer */
-    text-shadow: 0px 0px 12px rgba(91, 245, 123, 0.8); /* Glowing green effect */
-    text-decoration: none; /* No underline, just shimmer */
+    text-shadow: 0px 0px 12px rgba(91, 245, 123, 0.8), 0 0 20px #00ff00, 0 0 30px #00ff00;
+    text-decoration: none;
 }
 
 /* Text Box for Filmmaker | Photographer | Programmer */
 .container {
     position: absolute;
-    bottom: 8%; /* Pushed further down */
-    left: 50%; /* Centers it horizontally */
-    transform: translateX(-50%); /* Ensures perfect centering */
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    background: rgba(0, 0, 0, 0.7); /* Darkened for better contrast */
+    background: rgba(0, 0, 0, 0.7);
     padding: 15px 25px;
     border-radius: 10px;
     max-width: 450px;
@@ -52,27 +52,32 @@ body {
 }
 
 .container:hover {
-    background: rgba(0, 0, 0, 0.85); /* Slight darkening effect on hover */
+    background: rgba(0, 0, 0, 0.85);
+}
+
+/* Neon Effect on Hover */
+.hero-text:hover {
+    text-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00, 0 0 45px #00ff00;
 }
 
 /* ABOUT PAGE STYLING */
 .about-page {
     background: white;
     color: black;
-    height: 100vh; /* Full screen height */
+    height: 100vh;
     display: flex;
-    justify-content: center; /* Centers everything */
-    align-items: center; /* Centers vertically */
+    justify-content: center;
+    align-items: center;
     padding: 50px;
 }
 
 /* Container for Image + Text */
 .about-container {
     display: flex;
-    align-items: center; /* Aligns items in a row */
-    justify-content: flex-start; /* Aligns content to the left */
-    gap: 40px; /* Space between text and image */
-    max-width: 900px; /* Prevents excessive stretching */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    max-width: 900px;
     width: 100%;
 }
 
@@ -81,16 +86,16 @@ body {
     width: 400px;
     height: auto;
     object-fit: cover;
-    flex-shrink: 0; /* Prevents shrinking */
+    flex-shrink: 0;
     display: block;
-    margin: auto; /* Ensures it's centered */
+    margin: auto;
 }
 
 /* Ensures text stays on the left */
 .about-text {
-    max-width: 350px; /* Keeps text from stretching */
+    max-width: 350px;
     text-align: left;
-    flex: 1; /* Takes up remaining space */
+    flex: 1;
 }
 
 
