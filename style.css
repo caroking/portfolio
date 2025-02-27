@@ -19,7 +19,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
-    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+    text-shadow: 0 0 10px #2E8B57, 0 0 20px #2E8B57, 0 0 30px #2E8B57;
     transition: text-shadow 0.3s ease-in-out;
 }
 
