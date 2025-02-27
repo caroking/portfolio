@@ -1,3 +1,28 @@
+/* GENERAL STYLES */
+body { 
+    background: url('homepage1.jpg') no-repeat center center fixed;
+    background-size: cover;  
+    font-family: 'Arial', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    color: white;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Huge Name Centered at the Top */
+.hero-text {
+    font-size: 8rem;  
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 0 0 6px #2E8B57, 0 0 12px rgba(46, 139, 87, 0.8); /* Evergreen glow with a softer spread */
+    transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
 /* Make Name Clickable */
 .hero-text a {
     text-decoration: none;
@@ -31,4 +56,66 @@
 .hero-text a:hover::after {
     transform: scaleX(1); /* Expands the underline */
     transform-origin: left;
+}
+
+/* Softer Hover Neon Effect */
+.hero-text:hover {
+    text-shadow: 0 0 6px #E86A92, 0 0 12px rgba(232, 106, 146, 0.7), 0 0 16px rgba(232, 106, 146, 0.5);
+}
+
+/* Text Box for Filmmaker | Photographer | Programmer */
+.container {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 25px;
+    border-radius: 10px;
+    max-width: 450px;
+    font-size: 1.5rem;
+    transition: background 0.3s ease-in-out;
+}
+
+.container:hover {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+/* ABOUT PAGE STYLING */
+.about-page {
+    background: white;
+    color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+/* Container for Image + Text */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Centers the image on the page */
+.headshot {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+    margin: auto;
+}
+
+/* Ensures text stays on the left */
+.about-text {
+    max-width: 350px;
+    text-align: left;
+    flex: 1;
 }
