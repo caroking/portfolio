@@ -34,7 +34,6 @@ body {
 }
 
 /* Text Box for Filmmaker | Photographer | Programmer */
-/* Positions text in the lower-right area, but not too tight */
 .container {
     position: absolute;
     bottom: 5%;   /* Places it a bit above the very bottom */
@@ -45,6 +44,19 @@ body {
     border-radius: 10px;
     max-width: 400px;
 }
+
+/* ABOUT PAGE STYLING */
+.about-page {
+    background: white;
+    color: black;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center; /* Centers everything */
+    align-items: center; /* Centers vertically */
+    padding: 50px;
+}
+
+/* Container for Image + Text */
 .about-container {
     display: flex;
     align-items: center; /* Aligns items in a row */
@@ -63,20 +75,9 @@ body {
     display: block;
 }
 
-/* Ensures text stays to the left */
-.about-container p {
-    max-width: 350px; /* Controls width */
+/* Positions text to the left */
+.about-text {
+    max-width: 350px; /* Keeps text from stretching */
     text-align: left;
     flex: 1; /* Takes up remaining space */
-}
-
-/* Makes sure the entire page centers everything */
-.about-page {
-    background: white;
-    color: black;
-    height: 100vh; /* Full screen height */
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    padding: 50px;
 }
