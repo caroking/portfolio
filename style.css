@@ -19,7 +19,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    text-shadow: 2px 2px 8px rgba(0, 50, 0, 0.6); /* Dark green shadow for better contrast */
     transition: text-shadow 0.3s ease-in-out;
 }
 
@@ -39,7 +39,7 @@ body {
 /* Text Box for Filmmaker | Photographer | Programmer */
 .container {
     position: absolute;
-    bottom: 15%; /* Moves it lower to overlay the shirt */
+    bottom: 8%; /* Pushed further down */
     left: 50%; /* Centers it horizontally */
     transform: translateX(-50%); /* Ensures perfect centering */
     text-align: center;
