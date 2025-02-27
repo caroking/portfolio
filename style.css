@@ -54,8 +54,7 @@ body {
 
 .about-container {
     display: flex;
-     flex-direction: row-reverse; /* Flips the order: text on the left, image on the right */
-    justify-content: center; /* Centers everything horizontally */
+    justify-content: center; /* Centers the entire content horizontally */
     align-items: center; /* Centers everything vertically */
     height: 100vh; /* Makes sure the container fills the full screen height */
     gap: 40px; /* Adds space between the image and text */
@@ -65,9 +64,6 @@ body {
     width: 400px; 
     height: auto;
     object-fit: cover; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Moves it back by half its width & height */
 }
 
 .about-container p {
