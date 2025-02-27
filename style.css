@@ -46,18 +46,20 @@ body {
     max-width: 400px;
 }
 .about-page {
-    background: #2c3e50;
+    background: white;
     color: black; /* Ensures text is readable */
-    text-align: center;
     padding: 50px;
+    display: flex;
+    justify-content: center; /* Centers the whole container horizontally */
+    align-items: center; /* Centers the whole container vertically */
+    height: 100vh; /* Makes sure it fills the screen */
 }
 
 .about-container {
     display: flex;
-    justify-content: center; /* Centers everything horizontally */
-    align-items: center; /* Centers everything vertically */
-    height: 100vh; /* Full screen height */
+    align-items: center; /* Aligns text and image at the center */
     gap: 40px; /* Space between text and image */
+    max-width: 900px; /* Keeps layout contained */
 }
 
 .headshot {
@@ -67,11 +69,7 @@ body {
 }
 
 .about-container p {
-    max-width: 400px; /* Keeps text from stretching too wide */
-    text-align: left; /* Aligns text to the left */
-    flex: 1; /* Allows text to take up space properly */
-}
-
-.headshot {
-    flex-shrink: 0; /* Prevents the image from resizing unexpectedly */
+    max-width: 400px; /* Keeps text readable */
+    text-align: left; /* Ensures text is left-aligned */
+    flex: 1; /* Makes sure text fills available space */
 }
