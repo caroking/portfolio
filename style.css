@@ -19,72 +19,60 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
-    text-shadow: 0px 0px 25px rgba(91, 245, 123, 1); /* BRIGHT GREEN glow */
+    text-shadow: 2px 2px 8px rgba(0, 50, 0, 0.6); /* Dark green shadow for better contrast */
+    transition: text-shadow 0.3s ease-in-out;
 }
 
+/* Make Name Clickable */
 .hero-text a {
     text-decoration: none;
     color: white;
-    transition: 0.3s ease;
+    transition: 0.3s ease-in-out;
 }
 
 .hero-text a:hover {
-    color: #5BF57B; /* That bright green */
-    text-shadow: 0px 0px 40px rgba(91, 245, 123, 1); /* Bigger glow on hover */
-    text-decoration: underline;
+    color: #5BF57B; /* Green shimmer */
+    text-shadow: 0px 0px 12px rgba(91, 245, 123, 0.8); /* Glowing green effect */
+    text-decoration: none; /* No underline, just shimmer */
 }
 
 /* Text Box for Filmmaker | Photographer | Programmer */
 .container {
     position: absolute;
-    bottom: 2%;  /* Pushed all the way down */
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 8%; /* Pushed further down */
+    left: 50%; /* Centers it horizontally */
+    transform: translateX(-50%); /* Ensures perfect centering */
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); 
-    padding: 20px; 
+    background: rgba(0, 0, 0, 0.7); /* Darkened for better contrast */
+    padding: 15px 25px;
     border-radius: 10px;
-    max-width: 400px;
-    transition: 0.3s ease; /* Smooth transition */
+    max-width: 450px;
+    font-size: 1.5rem;
+    transition: background 0.3s ease-in-out;
 }
 
-/* Text Box Hover Effect */
 .container:hover {
-    background: rgba(0, 0, 0, 0.9); /* Fully black on hover */
-}
-
-/* Text Styling */
-.container h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0px 0px 20px rgba(91, 245, 123, 1); /* Bright green shadow */
-    transition: 0.3s ease;
-}
-
-.container h2:hover {
-    color: #5BF57B; /* Same bright green */
-    text-shadow: 0px 0px 40px rgba(91, 245, 123, 1); /* Stronger glow on hover */
+    background: rgba(0, 0, 0, 0.85); /* Slight darkening effect on hover */
 }
 
 /* ABOUT PAGE STYLING */
 .about-page {
     background: white;
     color: black;
-    height: 100vh; 
+    height: 100vh; /* Full screen height */
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center; /* Centers everything */
+    align-items: center; /* Centers vertically */
     padding: 50px;
 }
 
 /* Container for Image + Text */
 .about-container {
     display: flex;
-    align-items: center; 
-    justify-content: flex-start; 
-    gap: 40px; 
-    max-width: 900px;
+    align-items: center; /* Aligns items in a row */
+    justify-content: flex-start; /* Aligns content to the left */
+    gap: 40px; /* Space between text and image */
+    max-width: 900px; /* Prevents excessive stretching */
     width: 100%;
 }
 
@@ -93,14 +81,16 @@ body {
     width: 400px;
     height: auto;
     object-fit: cover;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevents shrinking */
     display: block;
-    margin: auto;
+    margin: auto; /* Ensures it's centered */
 }
 
 /* Ensures text stays on the left */
 .about-text {
-    max-width: 350px;
+    max-width: 350px; /* Keeps text from stretching */
     text-align: left;
-    flex: 
+    flex: 1; /* Takes up remaining space */
+}
+
 
