@@ -60,22 +60,23 @@ body {
 .about-container {
     display: flex;
     align-items: center; /* Aligns items in a row */
-    justify-content: center; /* Centers the entire content */
+    justify-content: flex-start; /* Aligns content to the left */
     gap: 40px; /* Space between text and image */
     max-width: 900px; /* Prevents excessive stretching */
     width: 100%;
 }
 
-/* Centers the image perfectly */
+/* Centers the image on the page */
 .headshot {
     width: 400px;
     height: auto;
     object-fit: cover;
     flex-shrink: 0; /* Prevents shrinking */
     display: block;
+    margin: auto; /* Ensures it's centered */
 }
 
-/* Positions text to the left */
+/* Ensures text stays on the left */
 .about-text {
     max-width: 350px; /* Keeps text from stretching */
     text-align: left;
