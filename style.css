@@ -19,20 +19,21 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
-    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7); /* Subtle glow for readability */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    transition: text-shadow 0.3s ease-in-out;
 }
 
 /* Make Name Clickable */
 .hero-text a {
     text-decoration: none;
     color: white;
-    transition: 0.3s ease;
+    transition: 0.3s ease-in-out;
 }
 
 .hero-text a:hover {
-    color: #5BF57B; /* Changes color on hover */
-    text-decoration: underline;
-    letter-spacing: 1px; /* Slight spacing for a refined effect */
+    color: #5BF57B; /* Green shimmer */
+    text-shadow: 0px 0px 12px rgba(91, 245, 123, 0.8); /* Glowing green effect */
+    text-decoration: none; /* No underline, just shimmer */
 }
 
 /* Text Box for Filmmaker | Photographer | Programmer */
