@@ -86,11 +86,11 @@ body {
     transform: translateX(-50%); /* Re-centers it exactly */
 }
 
-/* Ensures text is always to the left of the centered image */
 .about-container p {
-    max-width: 400px;
+    max-width: 350px; /* Slightly smaller width to ensure spacing */
     text-align: left;
     flex: 1;
-    position: absolute;
-    left: calc(50% - 440px); /* Positions text to the left of the centered image */
+    position: relative;
+    left: 0; /* No absolute positioning */
+    margin-right: 50px; /* Pushes it away from the image */
 }
