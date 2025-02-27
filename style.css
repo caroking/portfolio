@@ -33,7 +33,7 @@ body {
 
 /* Hover Effect - Fuzzed Out Underlined Heaven */
 .hero-text a:hover {
-    color: #E86A92; /* Switch to white */
+    color: #E86A92; 
     text-shadow: 0 0 10px #E86A92, 0 0 20px #E86A92, 0 0 30px #E86A92;
 }
 
@@ -43,9 +43,10 @@ body {
     left: 0;
     bottom: -5px;
     width: 100%;
-    height: 3px;
+    height: 4px; /* Thicker underline */
     background: #E86A92;
     box-shadow: 0 0 6px #E86A92, 0 0 12px rgba(232, 106, 146, 0.8);
+    transition: width 0.3s ease-in-out;
 }
 
 /* Text Box for Filmmaker | Photographer | Programmer */
@@ -60,11 +61,14 @@ body {
     border-radius: 10px;
     max-width: 450px;
     font-size: 1.5rem;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
+/* Hover Effect - Muted Yellow Glow */
 .container:hover {
     background: rgba(0, 0, 0, 0.85);
+    color: #E1B12C; /* Warm, toned-down yellow */
+    text-shadow: 0 0 6px #E1B12C, 0 0 12px rgba(225, 177, 44, 0.6);
 }
 
 /* ABOUT PAGE STYLING */
