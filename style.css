@@ -19,21 +19,22 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
-    color: #2E8B57; /* Evergreen text */
+    color: #E86A92; /* Blushy pink base */
     transition: color 0.3s ease-in-out;
 }
 
 /* Make Name Clickable */
 .hero-text a {
     text-decoration: none;
-    color: #2E8B57; /* Evergreen base */
+    color: #E86A92; /* Blushy pink base */
     transition: 0.3s ease-in-out;
     position: relative;
 }
 
-/* Hover Effect - Blushy Pink + Underline */
+/* Hover Effect - Fuzzed Out Underlined Heaven */
 .hero-text a:hover {
-    color: #E86A92; /* Blushy pink */
+    color: white; /* Switch to white */
+    text-shadow: 0 0 10px #E86A92, 0 0 20px #E86A92, 0 0 30px #E86A92;
 }
 
 .hero-text a:hover::after {
