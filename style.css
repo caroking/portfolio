@@ -47,29 +47,31 @@ body {
 }
 .about-page {
     background: white;
-    color: black; /* Ensures text is readable */
+    color: black;
     padding: 50px;
     display: flex;
-    justify-content: center; /* Centers the whole container horizontally */
-    align-items: center; /* Centers the whole container vertically */
-    height: 100vh; /* Makes sure it fills the screen */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh;
 }
 
 .about-container {
     display: flex;
-    align-items: center; /* Aligns text and image at the center */
-    gap: 40px; /* Space between text and image */
-    max-width: 900px; /* Keeps layout contained */
+    justify-content: center; /* Keeps the whole container centered */
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
 }
 
 .headshot {
-    width: 400px; 
+    width: 400px;
     height: auto;
     object-fit: cover;
+    align-self: center; /* Ensures the image stays centered */
 }
 
 .about-container p {
-    max-width: 400px; /* Keeps text readable */
-    text-align: left; /* Ensures text is left-aligned */
-    flex: 1; /* Makes sure text fills available space */
+    max-width: 400px;
+    text-align: left;
+    flex: 1;
 }
