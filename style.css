@@ -54,24 +54,38 @@ body {
     align-items: center; /* Center content vertically */
     height: 100vh; /* Full viewport height */
 }
-
+/* Centers everything on the page */
+.about-page {
+    background: white;
+    color: black;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    padding: 50px;
+}
+/* Keeps the image centered, with text on the left */
 .about-container {
     display: flex;
-    align-items: center; /* Align items in a row */
-    justify-content: center; /* Centers entire container */
-    max-width: 900px; /* Keeps layout contained */
+    align-items: center; /* Aligns items in a row */
+    justify-content: center; /* Centers whole container */
+    gap: 40px; /* Space between image and text */
+    max-width: 900px; /* Keeps it from getting too wide */
     width: 100%;
 }
 
+/* Makes sure text is always on the left */
 .about-container p {
-    max-width: 400px; /* Keeps text readable */
-    text-align: left; /* Left-aligns the text */
-    flex: 1; /* Allows text to take available space */
+    max-width: 400px; 
+    text-align: left; 
+    flex: 1; /* Makes text take up space */
+    order: -1; /* Moves text to the left of the image */
 }
 
+/* Ensures the image stays a fixed size */
 .headshot {
     width: 400px;
     height: auto;
     object-fit: cover;
-    flex-shrink: 0; /* Prevents image from resizing */
+    flex-shrink: 0; /* Prevents it from resizing */
 }
