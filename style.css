@@ -19,6 +19,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7); /* Subtle glow for readability */
 }
 
 /* Make Name Clickable */
@@ -31,18 +32,26 @@ body {
 .hero-text a:hover {
     color: #5BF57B; /* Changes color on hover */
     text-decoration: underline;
+    letter-spacing: 1px; /* Slight spacing for a refined effect */
 }
 
 /* Text Box for Filmmaker | Photographer | Programmer */
 .container {
     position: absolute;
-    bottom: 5%;   /* Places it a bit above the very bottom */
-    right: 5%;    /* Moves it away from the right edge */
-    text-align: right;
-    background: rgba(0, 0, 0, 0.5); 
-    padding: 20px; 
+    bottom: 30%; /* Moves it higher to overlay the black shirt */
+    left: 50%; /* Centers it */
+    transform: translateX(-50%); /* Ensures perfect centering */
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); /* Darkened for better contrast */
+    padding: 15px 25px;
     border-radius: 10px;
-    max-width: 400px;
+    max-width: 450px;
+    font-size: 1.5rem;
+    transition: background 0.3s ease-in-out;
+}
+
+.container:hover {
+    background: rgba(0, 0, 0, 0.85); /* Slight darkening effect on hover */
 }
 
 /* ABOUT PAGE STYLING */
