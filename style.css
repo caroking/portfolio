@@ -54,19 +54,24 @@ body {
 
 .about-container {
     display: flex;
-    justify-content: center; /* Centers the entire content horizontally */
+    justify-content: center; /* Centers everything horizontally */
     align-items: center; /* Centers everything vertically */
-    height: 100vh; /* Makes sure the container fills the full screen height */
-    gap: 40px; /* Adds space between the image and text */
+    height: 100vh; /* Full screen height */
+    gap: 40px; /* Space between text and image */
 }
 
 .headshot {
     width: 400px; 
     height: auto;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .about-container p {
     max-width: 400px; /* Keeps text from stretching too wide */
     text-align: left; /* Aligns text to the left */
+    flex: 1; /* Allows text to take up space properly */
+}
+
+.headshot {
+    flex-shrink: 0; /* Prevents the image from resizing unexpectedly */
 }
