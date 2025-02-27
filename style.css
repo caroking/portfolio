@@ -19,60 +19,65 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 50, 0, 0.6); /* Dark green shadow for better contrast */
-    transition: text-shadow 0.3s ease-in-out;
 }
 
-/* Make Name Clickable */
 .hero-text a {
     text-decoration: none;
     color: white;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease;
 }
 
 .hero-text a:hover {
-    color: #5BF57B; /* Green shimmer */
-    text-shadow: 0px 0px 12px rgba(91, 245, 123, 0.8); /* Glowing green effect */
-    text-decoration: none; /* No underline, just shimmer */
+    color: #1FAA59; /* Deep green */
+    text-shadow: 0px 0px 12px rgba(20, 150, 80, 0.8);
+    text-decoration: underline;
 }
 
 /* Text Box for Filmmaker | Photographer | Programmer */
 .container {
     position: absolute;
-    bottom: 8%; /* Pushed further down */
-    left: 50%; /* Centers it horizontally */
-    transform: translateX(-50%); /* Ensures perfect centering */
+    bottom: 12%;  /* Pushed down more */
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    background: rgba(0, 0, 0, 0.7); /* Darkened for better contrast */
-    padding: 15px 25px;
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 20px; 
     border-radius: 10px;
-    max-width: 450px;
-    font-size: 1.5rem;
-    transition: background 0.3s ease-in-out;
+    max-width: 400px;
 }
 
-.container:hover {
-    background: rgba(0, 0, 0, 0.85); /* Slight darkening effect on hover */
+/* Text Styling */
+.container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 12px rgba(20, 150, 80, 0.8); /* Deep emerald glow */
+    transition: 0.3s ease;
+}
+
+.container h2:hover {
+    color: #1FAA59; /* Deep green */
+    text-shadow: 0px 0px 16px rgba(20, 150, 80, 1); /* More shimmer on hover */
 }
 
 /* ABOUT PAGE STYLING */
 .about-page {
     background: white;
     color: black;
-    height: 100vh; /* Full screen height */
+    height: 100vh; 
     display: flex;
-    justify-content: center; /* Centers everything */
-    align-items: center; /* Centers vertically */
+    justify-content: center; 
+    align-items: center; 
     padding: 50px;
 }
 
 /* Container for Image + Text */
 .about-container {
     display: flex;
-    align-items: center; /* Aligns items in a row */
-    justify-content: flex-start; /* Aligns content to the left */
-    gap: 40px; /* Space between text and image */
-    max-width: 900px; /* Prevents excessive stretching */
+    align-items: center; 
+    justify-content: flex-start; 
+    gap: 40px; 
+    max-width: 900px;
     width: 100%;
 }
 
@@ -81,14 +86,14 @@ body {
     width: 400px;
     height: auto;
     object-fit: cover;
-    flex-shrink: 0; /* Prevents shrinking */
+    flex-shrink: 0;
     display: block;
-    margin: auto; /* Ensures it's centered */
+    margin: auto;
 }
 
 /* Ensures text stays on the left */
 .about-text {
-    max-width: 350px; /* Keeps text from stretching */
+    max-width: 350px;
     text-align: left;
-    flex: 1; /* Takes up remaining space */
+    flex: 1;
 }
