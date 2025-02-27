@@ -65,32 +65,26 @@ body {
     padding: 50px;
 }
 
-/* This container is centered, with text on the left and image in the middle */
 .about-container {
     display: flex;
     align-items: center; /* Aligns text and image */
+    justify-content: center; /* Centers whole container */
     gap: 40px; /* Space between image and text */
     max-width: 900px; /* Prevents stretching */
     width: 100%;
-    position: relative;
 }
 
-/* Keeps the image centered */
+/* Centers the image within the container */
 .headshot {
     width: 400px;
     height: auto;
     object-fit: cover;
     flex-shrink: 0; /* Prevents resizing */
-    position: relative; /* Allows positioning */
-    left: 50%; /* Moves the image halfway across the screen */
-    transform: translateX(-50%); /* Re-centers it exactly */
 }
 
+/* Positions text to the left of the image */
 .about-container p {
-    max-width: 350px; /* Slightly smaller width to ensure spacing */
+    max-width: 350px; /* Keeps text readable */
     text-align: left;
-    flex: 1;
-    position: relative;
-    left: 0; /* No absolute positioning */
-    margin-right: 50px; /* Pushes it away from the image */
+    flex: 1; /* Allows text to take up remaining space */
 }
