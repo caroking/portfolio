@@ -11,6 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 /* Huge Name Centered at the Top */
 .hero-text {
     font-size: 8rem;  
@@ -18,7 +19,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
-    text-shadow: 0 0 6px #2E8B57, 0 0 12px rgba(46, 139, 87, 0.8); /* Evergreen glow with a softer spread */
+    text-shadow: 0 0 6px #2E8B57, 0 0 12px rgba(46, 139, 87, 0.8); /* Evergreen glow */
     transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -37,8 +38,7 @@ body {
 
 /* Softer Hover Neon Effect */
 .hero-text:hover {
-    text-shadow: 0 0 6px #E86A92, 0 0 12px rgba(232, 106, 146, 0.7), 0 0 16px rgba(232, 106, 146, 0.5);
-}
+    text-shadow: 0 0 10px #E86A92, 0 0 20px #E86A92, 0 0 30px #E86A92;
 }
 
 /* Text Box for Filmmaker | Photographer | Programmer */
@@ -48,7 +48,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
     padding: 15px 25px;
     border-radius: 10px;
     max-width: 450px;
@@ -57,12 +57,7 @@ body {
 }
 
 .container:hover {
-    background: rgba(0, 0, 0, 0.85);
-}
-
-/* Softer Hover Neon Effect */
-.hero-text:hover {
-    text-shadow: 0 0 10px #E86A92, 0 0 20px #E86A92, 0 0 30px #E86A92;
+    background: rgba(0, 0, 0, 0.85); /* Darkens slightly on hover */
 }
 
 /* ABOUT PAGE STYLING */
@@ -102,5 +97,4 @@ body {
     text-align: left;
     flex: 1;
 }
-
 
