@@ -19,45 +19,38 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
-    text-shadow: 0 0 6px #D4AF37, 0 0 12px rgba(212, 175, 55, 0.8); /* Pale Gold Glow */
-    transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: #2E8B57; /* Evergreen text */
+    transition: color 0.3s ease-in-out;
 }
 
 /* Make Name Clickable */
 .hero-text a {
     text-decoration: none;
-    color: white;
+    color: #2E8B57; /* Evergreen base */
     transition: 0.3s ease-in-out;
     position: relative;
 }
 
-/* Pink Underline Effect on Hover */
-.hero-text a::after {
+/* Hover Effect - Blushy Pink + Underline */
+.hero-text a:hover {
+    color: #E86A92; /* Blushy pink */
+}
+
+.hero-text a:hover::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: -5px;
     width: 100%;
     height: 3px;
-    background: #E86A92; /* Blushy Pink */
+    background: #E86A92;
     box-shadow: 0 0 6px #E86A92, 0 0 12px rgba(232, 106, 146, 0.8);
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-
-.hero-text a:hover::after {
-    transform: scaleX(1);
-}
-
-.hero-text a:hover {
-    color: #E86A92; /* Blushy pink */
-    text-shadow: 0 0 6px #E86A92, 0 0 12px rgba(232, 106, 146, 0.8), 0 0 18px rgba(232, 106, 146, 0.5);
 }
 
 /* Text Box for Filmmaker | Photographer | Programmer */
 .container {
     position: absolute;
-    bottom: 1%; /* Moved lower */
+    bottom: 1%; /* Pushed down to the bottom */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -110,4 +103,3 @@ body {
     text-align: left;
     flex: 1;
 }
-
