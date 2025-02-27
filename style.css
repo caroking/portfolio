@@ -54,7 +54,7 @@ body {
     align-items: center; /* Center content vertically */
     height: 100vh; /* Full viewport height */
 }
-/* Centers everything on the page */
+/* Centers the image in the middle of the page */
 .about-page {
     background: white;
     color: black;
@@ -64,28 +64,33 @@ body {
     align-items: center; /* Centers vertically */
     padding: 50px;
 }
-/* Keeps the image centered, with text on the left */
+
+/* This container is centered, with text on the left and image in the middle */
 .about-container {
     display: flex;
-    align-items: center; /* Aligns items in a row */
-    justify-content: center; /* Centers whole container */
+    align-items: center; /* Aligns text and image */
     gap: 40px; /* Space between image and text */
-    max-width: 900px; /* Keeps it from getting too wide */
+    max-width: 900px; /* Prevents stretching */
     width: 100%;
+    position: relative;
 }
 
-/* Makes sure text is always on the left */
-.about-container p {
-    max-width: 400px; 
-    text-align: left; 
-    flex: 1; /* Makes text take up space */
-    order: -1; /* Moves text to the left of the image */
-}
-
-/* Ensures the image stays a fixed size */
+/* Keeps the image centered */
 .headshot {
     width: 400px;
     height: auto;
     object-fit: cover;
-    flex-shrink: 0; /* Prevents it from resizing */
+    flex-shrink: 0; /* Prevents resizing */
+    position: relative; /* Allows positioning */
+    left: 50%; /* Moves the image halfway across the screen */
+    transform: translateX(-50%); /* Re-centers it exactly */
+}
+
+/* Ensures text is always to the left of the centered image */
+.about-container p {
+    max-width: 400px;
+    text-align: left;
+    flex: 1;
+    position: absolute;
+    left: calc(50% - 440px); /* Positions text to the left of the centered image */
 }
