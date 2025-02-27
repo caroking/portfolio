@@ -50,28 +50,28 @@ body {
     color: black;
     padding: 50px;
     display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    height: 100vh;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
 }
 
 .about-container {
     display: flex;
-    justify-content: center; /* Keeps the whole container centered */
-    align-items: center;
-    max-width: 900px;
+    align-items: center; /* Align items in a row */
+    justify-content: center; /* Centers entire container */
+    max-width: 900px; /* Keeps layout contained */
     width: 100%;
+}
+
+.about-container p {
+    max-width: 400px; /* Keeps text readable */
+    text-align: left; /* Left-aligns the text */
+    flex: 1; /* Allows text to take available space */
 }
 
 .headshot {
     width: 400px;
     height: auto;
     object-fit: cover;
-    align-self: center; /* Ensures the image stays centered */
-}
-
-.about-container p {
-    max-width: 400px;
-    text-align: left;
-    flex: 1;
+    flex-shrink: 0; /* Prevents image from resizing */
 }
