@@ -33,7 +33,7 @@ body {
 
 /* Hover Effect - Fuzzed Out Underlined Heaven */
 .hero-text a:hover {
-    color: white; /* Switch to white */
+    color: #E86A92; /* Switch to white */
     text-shadow: 0 0 10px #E86A92, 0 0 20px #E86A92, 0 0 30px #E86A92;
 }
 
