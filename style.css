@@ -1,100 +1,34 @@
-/* GENERAL STYLES */
-body { 
-    background: url('homepage1.jpg') no-repeat center center fixed;
-    background-size: cover;  
-    font-family: 'Arial', sans-serif; 
-    margin: 0; 
-    padding: 0; 
-    color: white;
-    height: 100vh; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Huge Name Centered at the Top */
-.hero-text {
-    font-size: 8rem;  
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 20px;
-    text-shadow: 0 0 6px #2E8B57, 0 0 12px rgba(46, 139, 87, 0.8); /* Evergreen glow */
-    transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
 /* Make Name Clickable */
 .hero-text a {
     text-decoration: none;
     color: white;
     transition: 0.3s ease-in-out;
+    position: relative; /* Needed for the underline effect */
 }
 
+/* Hover Effect: Pink Glow + Underline */
 .hero-text a:hover {
     color: #E86A92; /* Blushy pink */
     text-shadow: 0 0 6px #E86A92, 0 0 12px rgba(232, 106, 146, 0.8), 0 0 18px rgba(232, 106, 146, 0.5);
-    text-decoration: none;
 }
 
-/* Softer Hover Neon Effect */
-.hero-text:hover {
-    text-shadow: 0 0 10px #E86A92, 0 0 20px #E86A92, 0 0 30px #E86A92;
-}
-
-/* Text Box for Filmmaker | Photographer | Programmer */
-.container {
+/* Underline Effect */
+.hero-text a::after {
+    content: "";
     position: absolute;
-    bottom: 8%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-    padding: 15px 25px;
-    border-radius: 10px;
-    max-width: 450px;
-    font-size: 1.5rem;
-    transition: background 0.3s ease-in-out;
-}
-
-.container:hover {
-    background: rgba(0, 0, 0, 0.85); /* Darkens slightly on hover */
-}
-
-/* ABOUT PAGE STYLING */
-.about-page {
-    background: white;
-    color: black;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-}
-
-/* Container for Image + Text */
-.about-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 40px;
-    max-width: 900px;
+    left: 0;
+    bottom: -5px; /* Adjusts how far below the text the line appears */
     width: 100%;
+    height: 3px; /* Thickness of the underline */
+    background-color: #E86A92; /* Blushy pink */
+    box-shadow: 0 0 6px #E86A92, 0 0 12px rgba(232, 106, 146, 0.8);
+    transform: scaleX(0); /* Starts hidden */
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Centers the image on the page */
-.headshot {
-    width: 400px;
-    height: auto;
-    object-fit: cover;
-    flex-shrink: 0;
-    display: block;
-    margin: auto;
+/* Expand Underline on Hover */
+.hero-text a:hover::after {
+    transform: scaleX(1); /* Expands the underline */
+    transform-origin: left;
 }
-
-/* Ensures text stays on the left */
-.about-text {
-    max-width: 350px;
-    text-align: left;
-    flex: 1;
-}
-
