@@ -69,8 +69,8 @@ body {
 
 /* ABOUT PAGE STYLING */
 .about-page {
-    background: white;
-    color: black;
+    background: black;
+    color: white;
     height: 100vh;
     display: flex;
     justify-content: center;
