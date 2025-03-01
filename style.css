@@ -12,18 +12,20 @@ body {
     align-items: center;
 }
 
-/* Huge Name Centered at the Top */
+/* Apply the new font to Caroline King */
 .hero-text {
-    font-size: 8rem;  
-    font-weight: bold;
+    font-family: 'Playwrite IT Moderna', sans-serif;
+    font-size: 8rem;
+    font-weight: 400; /* Adjust weight if needed */
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
     color: #444; /* Dimmed grey when off */
     transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-    text-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
+    text-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
     position: relative;
 }
+
 
 /* Make Name Clickable */
 .hero-text a {
