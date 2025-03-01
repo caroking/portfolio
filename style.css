@@ -73,19 +73,19 @@ body {
     text-shadow: 0 0 6px #E1B12C, 0 0 12px rgba(225, 177, 44, 0.6);
 }
 
-/* ABOUT PAGE STYLING */
 .about-page {
     background: url('about.JPEG') no-repeat center top;
-    background-size: 100% auto; /* Ensures full width and allows vertical scrolling */
-    background-attachment: scroll; /* Allows scrolling through full image */
+    background-size: cover;
+    background-attachment: scroll; /* Allows scrolling */
     color: white;
     min-height: 100vh;
+    height: auto; /* Allows content to extend beyond viewport */
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Aligns content at the top */
+    justify-content: center;
     align-items: center;
     padding: 50px;
-    overflow-y: auto; /* Enables scrolling */
+    flex-direction: column;
+    overflow-y: auto; /* Enables vertical scrolling */
 }
 
 /* Allows the About Page to Scroll */
