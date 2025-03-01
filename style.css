@@ -19,46 +19,41 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
-    color: #444; /* Dimmed for "off" look */
-    transition: color 0.3s ease-in-out;
+    color: #444; /* Dimmed color to simulate turned-off neon */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
     position: relative;
 }
 
 /* Make Name Clickable */
 .hero-text a {
     text-decoration: none;
-    color: inherit; /* Uses dimmed color */
+    color: inherit;
     transition: 0.3s ease-in-out;
     position: relative;
 }
 
-/* Neon Flicker Effect */
-@keyframes neon-flicker {
-    0% { text-shadow: none; color: #444; } /* Off */
-    20% { text-shadow: 0 0 5px #E86A92, 0 0 10px #E86A92; color: #E86A92; } /* Dim glow */
-    40% { text-shadow: none; color: #444; } /* Off */
-    60% { text-shadow: 0 0 8px #E86A92, 0 0 15px #E86A92; color: #E86A92; } /* Brighter */
-    80% { text-shadow: 0 0 12px #E86A92, 0 0 20px #E86A92; color: #E86A92; } /* Fully On */
-    100% { text-shadow: 0 0 15px #E86A92, 0 0 25px #E86A92; color: #E86A92; } /* Max Glow */
-}
-
-/* Hover Effect - Neon Turns On */
+/* Hover Effect - Neon Light Turns On */
 .hero-text a:hover {
-    animation: neon-flicker 1s linear forwards;
+    color: white; /* Bright white like a neon tube */
+    text-shadow: 
+        0 0 5px #E86A92, 
+        0 0 10px #E86A92, 
+        0 0 20px #E86A92, 
+        0 0 40px rgba(232, 106, 146, 0.8), 
+        0 0 80px rgba(232, 106, 146, 0.6);
 }
 
-.hero-text a:hover::after {
-    content: "";
+/* Dimensional Shading Inside the Letters */
+.hero-text a::before {
+    content: attr(data-text);
     position: absolute;
     left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 4px; /* Thicker underline */
-    background: #E86A92;
-    box-shadow: 0 0 6px #E86A92, 0 0 12px rgba(232, 106, 146, 0.8);
-    transition: width 0.3s ease-in-out;
+    top: 0;
+    z-index: -1;
+    color: rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
-
 /* Text Box for Filmmaker | Photographer | Programmer */
 .container {
     position: absolute;
