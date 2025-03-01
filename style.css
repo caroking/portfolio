@@ -19,9 +19,9 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
-    color: #444; /* Dimmed color to simulate turned-off neon */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: #444; /* Dimmed grey when off */
     transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    text-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
     position: relative;
 }
 
@@ -35,25 +35,22 @@ body {
 
 /* Hover Effect - Neon Light Turns On */
 .hero-text a:hover {
-    color: white; /* Bright white like a neon tube */
-    text-shadow: 
-        0 0 5px #E86A92, 
-        0 0 10px #E86A92, 
-        0 0 20px #E86A92, 
-        0 0 40px rgba(232, 106, 146, 0.8), 
-        0 0 80px rgba(232, 106, 146, 0.6);
+    color: white; /* Fully illuminated */
+    text-shadow: 0 0 5px #E86A92, 0 0 10px #E86A92, 0 0 20px #E86A92, 0 0 40px #E86A92, 0 0 80px rgba(232, 106, 146, 0.8);
 }
 
-/* Dimensional Shading Inside the Letters */
-.hero-text a::before {
-    content: attr(data-text);
+.hero-text a:hover::after {
+    content: "";
     position: absolute;
     left: 0;
-    top: 0;
-    z-index: -1;
-    color: rgba(0, 0, 0, 0.2);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    bottom: -5px;
+    width: 100%;
+    height: 4px; /* Thicker underline */
+    background: #E86A92;
+    box-shadow: 0 0 6px #E86A92, 0 0 12px rgba(232, 106, 146, 0.8);
+    transition: width 0.3s ease-in-out;
 }
+
 /* Text Box for Filmmaker | Photographer | Programmer */
 .container {
     position: absolute;
@@ -80,7 +77,7 @@ body {
 .about-page {
     background: #2C2C2C;
     color: white;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,4 +100,3 @@ body {
     text-align: left;
     flex: 1;
 }
-
