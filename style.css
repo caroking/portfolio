@@ -36,4 +36,72 @@ body {
 /* Hover Effect - Neon Light Turns On */
 .hero-text a:hover {
     color: white; /* Fully illuminated */
-    text-shadow: 0 0 5p
+    text-shadow: 0 0 5px #E86A92, 0 0 10px #E86A92, 0 0 20px #E86A92, 0 0 40px #E86A92, 0 0 80px rgba(232, 106, 146, 0.8);
+}
+
+.hero-text a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 4px; /* Thicker underline */
+    background: #E86A92;
+    box-shadow: 0 0 6px #E86A92, 0 0 12px rgba(232, 106, 146, 0.8);
+    transition: width 0.3s ease-in-out;
+}
+
+/* Text Box for Filmmaker | Photographer | Programmer */
+.container {
+    position: absolute;
+    bottom: 1%; /* Pushed down to the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 25px;
+    border-radius: 10px;
+    max-width: 450px;
+    font-size: 1.5rem;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover Effect - Muted Yellow Glow */
+.container:hover {
+    background: rgba(0, 0, 0, 0.85);
+    color: #E1B12C; /* Warm, toned-down yellow */
+    text-shadow: 0 0 6px #E1B12C, 0 0 12px rgba(225, 177, 44, 0.6);
+}
+
+/* ABOUT PAGE STYLING */
+.about-page {
+    background: url('about.JPEG') no-repeat center top;
+    background-size: 100% auto; /* Ensures full width and allows vertical scrolling */
+    background-attachment: scroll; /* Allows scrolling through full image */
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns content at the top */
+    align-items: center;
+    padding: 50px;
+    overflow-y: auto; /* Enables scrolling */
+}
+
+/* Allows the About Page to Scroll */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Ensures text stays on the left */
+.about-text {
+    max-width: 350px;
+    text-align: left;
+    flex: 1;
+}
