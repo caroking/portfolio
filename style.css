@@ -75,7 +75,7 @@ body {
 
 .about-page {
     background: url('about.JPEG') no-repeat center top;
-    background-size: contain; /* Ensures full image is scrollable */
+    background-size: 100% auto; /* Makes sure it spans the full width and scrolls down */
     background-attachment: scroll; /* Enables scrolling */
     background-position: top;
     color: white;
