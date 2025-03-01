@@ -19,22 +19,32 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
-    color: #E86A92; /* Blushy pink base */
+    color: #444; /* Dimmed for "off" look */
     transition: color 0.3s ease-in-out;
+    position: relative;
 }
 
 /* Make Name Clickable */
 .hero-text a {
     text-decoration: none;
-    color: #E86A92; /* Blushy pink base */
+    color: inherit; /* Uses dimmed color */
     transition: 0.3s ease-in-out;
     position: relative;
 }
 
-/* Hover Effect - Fuzzed Out Underlined Heaven */
+/* Neon Flicker Effect */
+@keyframes neon-flicker {
+    0% { text-shadow: none; color: #444; } /* Off */
+    20% { text-shadow: 0 0 5px #E86A92, 0 0 10px #E86A92; color: #E86A92; } /* Dim glow */
+    40% { text-shadow: none; color: #444; } /* Off */
+    60% { text-shadow: 0 0 8px #E86A92, 0 0 15px #E86A92; color: #E86A92; } /* Brighter */
+    80% { text-shadow: 0 0 12px #E86A92, 0 0 20px #E86A92; color: #E86A92; } /* Fully On */
+    100% { text-shadow: 0 0 15px #E86A92, 0 0 25px #E86A92; color: #E86A92; } /* Max Glow */
+}
+
+/* Hover Effect - Neon Turns On */
 .hero-text a:hover {
-    color: #E86A92; 
-    text-shadow: 0 0 10px #E86A92, 0 0 20px #E86A92, 0 0 30px #E86A92;
+    animation: neon-flicker 1s linear forwards;
 }
 
 .hero-text a:hover::after {
@@ -71,14 +81,18 @@ body {
     text-shadow: 0 0 6px #E1B12C, 0 0 12px rgba(225, 177, 44, 0.6);
 }
 
+/* ABOUT PAGE STYLING */
 .about-page {
-    background: url('about.JPEG') no-repeat center top;
-    background-size: cover; /* Stretches to fill width but keeps aspect ratio */
-    background-attachment: scroll; /* Ensures scrolling */
-    height: auto; /* Allows content to determine height */
-    min-height: 200vh; /* Forces enough height for scrolling */
+    background: #2C2C2C;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
 }
-/* Container for Text */
+
+/* Container for Image + Text */
 .about-container {
     display: flex;
     align-items: center;
@@ -87,3 +101,11 @@ body {
     max-width: 900px;
     width: 100%;
 }
+
+/* Ensures text stays on the left */
+.about-text {
+    max-width: 350px;
+    text-align: left;
+    flex: 1;
+}
+
