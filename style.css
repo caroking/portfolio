@@ -73,16 +73,18 @@ body {
 
 /* ABOUT PAGE STYLING */
 .about-page {
-    background: #2C2C2C;
+    background: url('about.JPEG') no-repeat center center fixed;
+    background-size: cover;
     color: white;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px;
+    overflow-y: auto; /* Enables scrolling */
 }
 
-/* Container for Image + Text */
+/* Container for Text */
 .about-container {
     display: flex;
     align-items: center;
@@ -90,21 +92,4 @@ body {
     gap: 40px;
     max-width: 900px;
     width: 100%;
-}
-
-/* Centers the image on the page */
-.headshot {
-    width: 400px;
-    height: auto;
-    object-fit: cover;
-    flex-shrink: 0;
-    display: block;
-    margin: auto;
-}
-
-/* Ensures text stays on the left */
-.about-text {
-    max-width: 350px;
-    text-align: left;
-    flex: 1;
 }
