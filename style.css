@@ -75,17 +75,17 @@ body {
 
 .about-page {
     background: url('about.JPEG') no-repeat center top;
-    background-size: contain; /* Ensures full image fits */
-    background-attachment: scroll; /* Allows scrolling */
+    background-size: contain; /* Ensures full image is scrollable */
+    background-attachment: scroll; /* Enables scrolling */
+    background-position: top;
     color: white;
-    min-height: 100vh;
-    height: auto; /* Allows content to extend beyond viewport */
+    height: 200vh; /* Makes the page twice the height of the viewport */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 50px;
     flex-direction: column;
-    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-y: auto;
 }
 
 /* Allows the About Page to Scroll */
