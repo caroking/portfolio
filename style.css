@@ -73,10 +73,10 @@ body {
 
 .about-page {
     background: url('about.JPEG') no-repeat center top;
-    background-size: contain; /* This keeps the whole image visible */
-    background-attachment: scroll; /* Makes sure it scrolls fully */
-    height: auto; /* Allows it to grow with the content */
-    min-height: 100vh; /* Ensures it starts at full screen */
+    background-size: cover; /* Stretches to fill width but keeps aspect ratio */
+    background-attachment: scroll; /* Ensures scrolling */
+    height: auto; /* Allows content to determine height */
+    min-height: 200vh; /* Forces enough height for scrolling */
 }
 /* Container for Text */
 .about-container {
