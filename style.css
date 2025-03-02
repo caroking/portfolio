@@ -1,6 +1,6 @@
 /* GENERAL STYLES */
 body { 
-    background: url('homepage1.jpg') no-repeat center center fixed;
+    background: fixed center center / cover no-repeat url('homepage1.jpg');
     background-size: cover;  
     font-family: 'Arial', sans-serif; 
     margin: 0; 
