@@ -22,24 +22,29 @@ body {
     left: 0;
     background: black;
     z-index: 100;
+    white-space: nowrap; /* Prevents text from breaking into new lines */
+}
+
+/* Make sure all text stays in a line */
+.top-bar div {
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 /* Left-aligned name */
 .top-bar .name {
-    flex: 1;
-    text-align: left;
+    justify-content: flex-start;
 }
 
 /* Centered Home */
 .top-bar .center {
-    flex: 1;
-    text-align: center;
+    justify-content: center;
 }
 
 /* Right-aligned links */
 .top-bar .right {
-    flex: 1;
-    text-align: right;
+    justify-content: flex-end;
 }
 
 /* Links */
@@ -71,5 +76,4 @@ body {
     height: 100vh; /* Ensures both images match in height */
     object-fit: cover; /* Crops and fills space if needed */
 }
-
 
