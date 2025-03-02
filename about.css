@@ -1,37 +1,29 @@
 /* About Page Styling */
 .about-page {
     background: url('about.JPEG') no-repeat center top;
-    background-size: 100% auto; /* Ensures full width while allowing vertical scrolling */
+    background-size: cover;
     background-attachment: scroll;
-    background-position: top;
     color: white;
-    height: 200vh; /* Twice the viewport height */
+    height: 200vh; /* Makes the page twice the height of the viewport */
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     padding: 50px;
-    flex-direction: column;
     overflow-y: auto;
 }
 
-/* Allows the About Page to Scroll */
+/* Ensures the text stays positioned correctly */
 .about-container {
     display: flex;
-    align-items: flex-start; /* Moves text higher on the page */
     justify-content: flex-start;
-    gap: 40px;
     max-width: 900px;
     width: 100%;
-    flex-wrap: wrap;
-    position: relative; /* Keeps text in place */
-    padding-top: 5vh; /* Adjusts spacing from the top */
+    padding-left: 5%;
 }
 
-/* Ensures text stays on the left and is contained */
+/* Positions the text to the left and moves it up */
 .about-text {
-    position: relative; /* Allows text to flow naturally */
     max-width: 35%;
     line-height: 1.6;
-    margin-left: 5%; /* Pushes text to the left */
-    margin-top: -10vh; /* Moves text higher */
+    position: relative;
+    top: -50px; /* Adjust this value to move it up */
 }
