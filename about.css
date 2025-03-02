@@ -27,7 +27,9 @@
 
 /* Ensures text stays on the left */
 .about-text {
-    max-width: 350px;
-    text-align: left;
-    flex: 1;
+    position: absolute;
+    left: 5%; /* Adjust to move text left */
+    top: 10%; /* Adjust to move text up */
+    max-width: 35%; /* Keeps text contained */
+    line-height: 1.6; /* Improves readability */
 }
