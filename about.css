@@ -1,29 +1,28 @@
 /* About Page Styling */
 .about-page {
-    background: url('about.JPEG') no-repeat center top;
+    background: url('about.JPEG') no-repeat center center;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
     color: white;
-    height: 200vh; /* Makes the page twice the height of the viewport */
+    min-height: 100vh;
     display: flex;
-    align-items: flex-start;
-    padding: 50px;
-    overflow-y: auto;
-}
-
-/* Ensures the text stays positioned correctly */
-.about-container {
-    display: flex;
-    justify-content: flex-start;
-    max-width: 900px;
-    width: 100%;
-    padding-left: 5%;
-}
-
-/* Positions the text to the left and moves it up */
-.about-text {
-    max-width: 35%;
-    line-height: 1.6;
+    align-items: flex-start; /* Align content toward the top */
+    padding: 5%;
     position: relative;
-    top: -50px; /* Adjust this value to move it up */
+}
+
+/* Container for text */
+.about-container {
+    position: absolute;
+    left: 3%; /* Move more to the left */
+    top: 25%; /* Move further down */
+    max-width: 35%;
+    z-index: 2;
+}
+
+/* Text styling */
+.about-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: left;
 }
