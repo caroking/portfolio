@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            z-index: 10;
+        }
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .container {
+            margin-top: 50px; /* Adjust for the top bar */
+        }
+        .image-container img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div>Your Name</div>
+        <div>
+            <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
+            <a href="mailto:carolinegkingart@email.com">Email</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="image-container">
+            <img src="your-image-1.jpg" alt="Portfolio Image 1">
+            <img src="your-image-2.jpg" alt="Portfolio Image 2">
+        </div>
+    </div>
+</body>
+</html>
 
