@@ -121,4 +121,26 @@ body {
     text-align: left;
     flex: 1;
 }
+/* Portfolio Gallery - Side by Side Images */
+.portfolio-gallery {
+    display: flex;
+    justify-content: center; /* Centers the images */
+    align-items: flex-start; /* Aligns images at the top */
+    gap: 20px; /* Space between images */
+    max-width: 90vw; /* Ensures it fits within viewport */
+    margin: 40px auto; /* Adds spacing around */
+}
 
+.portfolio-gallery img {
+    height: 400px; /* Makes sure they are the same height */
+    width: auto; /* Allows natural width */
+    object-fit: cover; /* Ensures cropping looks good */
+    border-radius: 10px; /* Optional: Rounded corners */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.portfolio-gallery img:hover {
+    transform: scale(1.05); /* Slight zoom */
+    opacity: 0.9; /* Dim effect */
+}
