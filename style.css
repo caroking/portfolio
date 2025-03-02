@@ -121,26 +121,53 @@ body {
     text-align: left;
     flex: 1;
 }
-/* Portfolio Gallery - Side by Side Images */
+/* PORTFOLIO PAGE STYLES */
+body {
+    background: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Top margin for name, IG, and email */
+.header-info {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 100;
+}
+
+.header-info a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.header-info a:hover {
+    color: #E86A92; /* Soft pink glow */
+}
+
+/* Portfolio Page Gallery */
 .portfolio-gallery {
     display: flex;
-    justify-content: center; /* Centers the images */
-    align-items: flex-start; /* Aligns images at the top */
-    gap: 20px; /* Space between images */
-    max-width: 90vw; /* Ensures it fits within viewport */
-    margin: 40px auto; /* Adds spacing around */
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px; /* Adjust spacing between images */
+    height: 100vh; /* Full screen height */
+    overflow-y: scroll; /* Enables seamless scrolling */
+    padding: 20px;
 }
 
+/* Individual Images */
 .portfolio-gallery img {
-    height: 400px; /* Makes sure they are the same height */
-    width: auto; /* Allows natural width */
-    object-fit: cover; /* Ensures cropping looks good */
-    border-radius: 10px; /* Optional: Rounded corners */
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.portfolio-gallery img:hover {
-    transform: scale(1.05); /* Slight zoom */
-    opacity: 0.9; /* Dim effect */
+    width: auto; /* Keeps original aspect ratio */
+    height: 100vh; /* Ensures both images match in height */
+    object-fit: cover; /* Crops and fills space if needed */
 }
