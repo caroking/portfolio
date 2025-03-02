@@ -1,11 +1,11 @@
 /* About Page Styling */
 .about-page {
     background: url('about.JPEG') no-repeat center top;
-    background-size: 100% auto; /* Makes sure it spans the full width and scrolls down */
-    background-attachment: scroll; /* Enables scrolling */
+    background-size: 100% auto; /* Ensures full width while allowing vertical scrolling */
+    background-attachment: scroll;
     background-position: top;
     color: white;
-    height: 200vh; /* Makes the page twice the height of the viewport */
+    height: 200vh; /* Twice the viewport height */
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -17,19 +17,21 @@
 /* Allows the About Page to Scroll */
 .about-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Moves text higher on the page */
     justify-content: flex-start;
     gap: 40px;
     max-width: 900px;
     width: 100%;
     flex-wrap: wrap;
+    position: relative; /* Keeps text in place */
+    padding-top: 5vh; /* Adjusts spacing from the top */
 }
 
-/* Ensures text stays on the left */
+/* Ensures text stays on the left and is contained */
 .about-text {
-    position: absolute;
-    left: 5%; /* Adjust to move text left */
-    top: 10%; /* Adjust to move text up */
-    max-width: 35%; /* Keeps text contained */
-    line-height: 1.6; /* Improves readability */
+    position: relative; /* Allows text to flow naturally */
+    max-width: 35%;
+    line-height: 1.6;
+    margin-left: 5%; /* Pushes text to the left */
+    margin-top: -10vh; /* Moves text higher */
 }
