@@ -37,6 +37,14 @@ body {
     justify-content: flex-start;
 }
 
+/* Tagline */
+.top-bar .name .tagline {
+    font-size: 10px;
+    margin-left: 8px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
 /* Centered Home */
 .top-bar .center {
     justify-content: center;
@@ -57,6 +65,11 @@ body {
 
 .top-bar a:hover {
     opacity: 0.7;
+}
+
+/* Email Spacing */
+.top-bar .right .email {
+    margin-left: 15px; /* Moves email address over slightly */
 }
 
 /* Portfolio Page Gallery */
