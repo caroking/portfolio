@@ -4,45 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background: black;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-        .top-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 10px 20px;
-            background: black;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 14px;
-            z-index: 10;
-        }
-        .top-bar a {
-            color: white;
-            text-decoration: none;
-            margin-left: 15px;
-        }
-        .container {
-            margin-top: 50px; /* Adjust for the top bar */
-        }
-        .image-container img {
-            width: 100%;
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="portfolio.css"> <!-- Links to the external CSS file -->
 </head>
 <body>
+
+    <!-- Top Bar -->
     <div class="top-bar">
         <div>Caroline King</div>
         <div>
@@ -50,14 +16,18 @@
             <a href="mailto:carolinegkingart@email.com">Email</a>
         </div>
     </div>
-    
+
+    <!-- Home Button -->
+    <a href="index.html" class="home-button">Home</a>
+
+    <!-- Portfolio Gallery -->
     <div class="container">
-       <!-- Portfolio Gallery -->
-    <div class="portfolio-gallery">
-        <img src="Mitchell.JPEG" alt="Mitchell Project">
-        <img src="Dani.JPEG" alt="Dani Project">
+        <div class="portfolio-gallery">
+            <img src="Mitchell.JPEG" alt="Mitchell Project">
+            <img src="Dani.JPEG" alt="Dani Project">
+        </div>
     </div>
-    </div>
+
 </body>
 </html>
 
