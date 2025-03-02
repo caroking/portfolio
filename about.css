@@ -1,12 +1,12 @@
 /* About Page Styling */
 .about-page {
-    background: url('about.JPEG') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
+    background: url('about.JPEG') no-repeat center top;
+    background-size: 100% auto; /* Ensures full width and allows scrolling */
+    background-attachment: scroll; /* Keeps background scrolling */
     color: white;
-    min-height: 100vh;
+    min-height: 200vh; /* Allows scrolling effect */
     display: flex;
-    align-items: flex-start; /* Align content toward the top */
+    align-items: flex-start;
     padding: 5%;
     position: relative;
 }
@@ -14,9 +14,9 @@
 /* Container for text */
 .about-container {
     position: absolute;
-    left: 3%; /* Move more to the left */
-    top: 25%; /* Move further down */
-    max-width: 35%;
+    left: 5%; /* Adjusted to keep it from being too far left */
+    top: 15%; /* Moved higher */
+    max-width: 30%; /* Reduced width so it doesn’t stretch too much */
     z-index: 2;
 }
 
