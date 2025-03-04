@@ -1,1 +1,24 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.gallery {
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.row {
+    display: flex;
+    gap: 10px;
+}
+.row img {
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+}
 
