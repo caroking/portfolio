@@ -6,19 +6,22 @@ body {
     justify-content: center;
 }
 .gallery {
-    max-width: 1200px;
+    max-width: 1000px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin: 0 auto;
 }
 .row {
     display: flex;
     gap: 10px;
+    justify-content: center;
 }
 .row img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     flex-grow: 1;
+    max-height: 400px;
+    object-fit: cover;
 }
-
