@@ -25,7 +25,3 @@
     line-height: 1.6;
     text-align: left;
 }
-body.about-page {
-    background: url('your-image.jpg') no-repeat center center fixed;
-    background-size: cover; /* Ensures the background spans the full screen */
-}
