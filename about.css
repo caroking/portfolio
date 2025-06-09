@@ -75,7 +75,13 @@
     font-size: 1.2rem; /* Adjusts font size for a balanced look */
     color: white; /* Ensures text is readable on the background */
 }
-
+.headshot {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Keeps image nicely cropped */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Soft shadow */
+}
 /* Text styling */
 .about-text {
     font-size: 1.1em;
