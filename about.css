@@ -1,6 +1,6 @@
 /* About Page Styling */
 .about-page {
-    background: url('about.JPEG') no-repeat center top;
+    background: url('About Background.jpg') no-repeat center top;
     background-size: 100% auto; /* Ensures full width and allows scrolling */
     background-attachment: scroll; /* Keeps background scrolling */
     color: white;
