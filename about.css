@@ -107,7 +107,7 @@
   border-radius: 8px;
   object-fit: cover;
  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-  margin-top: 40px; /* 👈 bumped it down a bit */
+  margin-top: 80px; /* 👈 bumped it down a bit */
 }
 
 
