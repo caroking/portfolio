@@ -98,27 +98,40 @@
     font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+/* Headshot & Hover Text Fix */
 .headshot-wrapper {
   position: relative;
+  width: 300px;        /* fixed width for consistent sizing */
+  margin-top: 80px;    /* keep vertical spacing */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.headshot {
+  width: 100%;         /* fills the wrapper width */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  display: block;      /* avoid inline spacing issues */
+}
+
 .headshot-hover-text {
-  margin-top: 8px;
+  position: absolute;
+  bottom: -30px;       /* position below the image */
+  left: 50%;
+  transform: translateX(-50%);
   color: transparent;
   font-weight: bold;
   font-size: 1.2em;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   transition: color 0.3s ease;
   user-select: none;
-  pointer-events: none; /* so it doesn’t block hover on the image */
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 .headshot-wrapper:hover .headshot-hover-text {
   color: fuchsia;
 }
-
-
-
