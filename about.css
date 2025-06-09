@@ -69,28 +69,151 @@
     letter-spacing: 1.2px;
 }
 .about-container {
-    max-width: 80%; /* more width to fit both side-by-side */
-    margin: 10vh auto; /* center horizontally with some vertical spacing */
+    max-width: 80%;
+    margin: 10vh auto;
     display: flex;
-    align-items: center;
-    gap: 30px; /* space between text and image */
-    color: black; /* text will be black on yellow */
+    align-items: stretch; /* equal height */
+    gap: 0;
+    color: #222; /* dark but soft text color */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
     
-/* Headshot stays the same but floats to the right */
+/* Photo on left */
 .headshot {
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+    border-radius: 12px 0 0 12px; /* rounded corners on left */
     object-fit: cover;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    flex-shrink: 0; /* keep size fixed */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+    margin: 0;
 }
+/* Text box on right */
 .about-text {
-    background-color: #f7e95f; /* bright but soft yellow */
-    padding: 25px 30px;
-    border-radius: 12px;
-    font-size: 1.1em;
-    line-height: 1.6;
-    max-width: 600px; /* limits the width of the text box */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background-color: #f5f1e9; /* soft cream, less “post-it” bright */
+    padding: 30px 40px;
+    border-radius: 0 12px 12px 0; /* rounded corners right side */
+    font-size: 1.15em;
+    line-height: 1.7;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+2. Typography: artsy minimal vibe
+Use a clean sans-serif like 'Helvetica Neue' or 'Montserrat' or 'Futura' (if you want a bit more modern art vibe).
+
+Keep font color dark gray (#222 or #333) on a soft cream background.
+
+Increase line spacing to keep airy and readable.
+
+Add subtle shadows for depth, but keep it elegant.
+
+3. Optional: Subtle accent for a little character
+Add a thin vertical accent line on the left side of the text box, in a muted color (like deep ochre or navy):
+
+css
+Copy
+Edit
+.about-text {
+    border-left: 4px solid #c49b3c; /* muted gold */
+    padding-left: 36px; /* adjust padding for the border */
+}
+This gives a subtle art gallery / editorial feel, breaking monotony without being loud.
+
+4. Mobile responsiveness (stacks nicely)
+css
+Copy
+Edit
+@media (max-width: 700px) {
+    .about-container {
+        flex-direction: column;
+        max-width: 90%;
+    }
+    .headshot {
+        border-radius: 12px 12px 0 0;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px auto;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+    .about-text {
+        border-radius: 0 0 12px 12px;
+        max-width: 100%;
+        border-left: none;
+        padding-left: 30px;
+    }
+}
+Putting it all together:
+css
+Copy
+Edit
+.about-container {
+    max-width: 80%;
+    margin: 10vh auto;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    color: #222;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.headshot {
+    width: 250px;
+    height: 250px;
+    border-radius: 12px 0 0 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.about-text {
+    background-color: #f5f1e9;
+    padding: 30px 40px;
+    border-radius: 0 12px 12px 0;
+    font-size: 1.15em;
+    line-height: 1.7;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 4px solid #c49b3c;
+}
+
+@media (max-width: 700px) {
+    .about-container {
+        flex-direction: column;
+        max-width: 90%;
+    }
+    .headshot {
+        border-radius: 12px 12px 0 0;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 20px auto;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+    .about-text {
+        border-radius: 0 0 12px 12px;
+        max-width: 100%;
+        border-left: none;
+        padding-left: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
