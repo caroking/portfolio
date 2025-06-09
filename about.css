@@ -67,34 +67,43 @@
     letter-spacing: 1.2px;
 }
 
-/* About Section Layout */
 .about-container {
-    max-width: 80%;
-    margin: 15vh auto 0;
+    max-width: 90%;
+    margin: 12vh auto 5vh auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 40px;
-    align-items: flex-start;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* Headshot Styling */
 .headshot {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+    flex: 1;
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
     object-fit: cover;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    align-self: flex-start;
 }
 
-/* Text Box Styling */
 .about-text {
-    font-size: 1.1em;
-    line-height: 1.6;
-    text-align: left;
-    max-width: 600px;
-    color: white;
+    flex: 2;
+    background-color: #f5f1e9;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: #222;
+    font-size: 1.15em;
+    line-height: 1.7;
 }
-
-
+.about-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #111;
+}
 
 
 
