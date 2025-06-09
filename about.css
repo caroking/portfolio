@@ -98,24 +98,27 @@
     font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* Headshot on right */
 .headshot-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-.headshot {
-  flex: 1;
-  width: 300px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
- box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-  margin-top: 80px; /* 👈 bumped it down a bit */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.headshot-hover-text {
+  margin-top: 8px;
+  color: transparent;
+  font-weight: bold;
+  font-size: 1.2em;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  transition: color 0.3s ease;
+  user-select: none;
+  pointer-events: none; /* so it doesn’t block hover on the image */
+}
 
+.headshot-wrapper:hover .headshot-hover-text {
+  color: fuchsia;
+}
 
 
 
