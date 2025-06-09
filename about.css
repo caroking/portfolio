@@ -69,22 +69,28 @@
     letter-spacing: 1.2px;
 }
 .about-container {
-    max-width: 40%; /* Limits text width to make it taller rather than wider */
-    margin: 10vh 5vw; /* Moves text down slightly and away from the edge */
-    line-height: 1.8; /* Increases space between lines for better readability */
-    font-size: 1.2rem; /* Adjusts font size for a balanced look */
-    color: white; /* Ensures text is readable on the background */
-}
+    max-width: 80%; /* more width to fit both side-by-side */
+    margin: 10vh auto; /* center horizontally with some vertical spacing */
+    display: flex;
+    align-items: center;
+    gap: 30px; /* space between text and image */
+    color: black; /* text will be black on yellow */
+    
+/* Headshot stays the same but floats to the right */
 .headshot {
     width: 250px;
     height: 250px;
-    border-radius: 50%; /* Makes it circular */
-    object-fit: cover; /* Keeps image nicely cropped */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Soft shadow */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    flex-shrink: 0; /* keep size fixed */
 }
-/* Text styling */
 .about-text {
+    background-color: #f7e95f; /* bright but soft yellow */
+    padding: 25px 30px;
+    border-radius: 12px;
     font-size: 1.1em;
     line-height: 1.6;
-    text-align: left;
+    max-width: 600px; /* limits the width of the text box */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
