@@ -73,19 +73,23 @@ body {
     letter-spacing: 1.2px;
 }
 .portfolio-title {
-    margin-top: 150px; /* give more breathing room below top bar */
+    margin-top: 150px;
     text-align: center;
     font-size: 3rem;
-    letter-spacing: 1.2em; /* spread the letters but not too much */
+    letter-spacing: 1.2em;
     color: #222;
     filter: blur(1px);
     opacity: 0.7;
-    transition: all 0.4s ease;
+    transition: filter 0.4s ease, opacity 0.4s ease;
     font-weight: 400;
     font-family: 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
+    will-change: filter, opacity;
 }
-
+.portfolio-title:hover {
+    filter: blur(0px);
+    opacity: 1;
+}
 /* Replace from here on */
 .gallery {
     display: grid;
