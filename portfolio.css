@@ -72,11 +72,11 @@ body {
     opacity: 0.7;
     letter-spacing: 1.2px;
 }
-portfolio-title {
-    margin-top: 120px; /* pushes it below top bar */
+.portfolio-title {
+    margin-top: 150px; /* give more breathing room below top bar */
     text-align: center;
-    font-size: 2.6rem;
-    letter-spacing: 1.5em; /* spreads out the letters */
+    font-size: 3rem;
+    letter-spacing: 1.2em; /* spread the letters but not too much */
     color: #222;
     filter: blur(1px);
     opacity: 0.7;
@@ -86,10 +86,6 @@ portfolio-title {
     text-transform: uppercase;
 }
 
-.portfolio-title:hover {
-    filter: blur(0);
-    opacity: 1;
-}
 /* Replace from here on */
 .gallery {
     display: grid;
