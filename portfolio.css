@@ -75,7 +75,7 @@ body {
 
 .gallery {
     max-width: 1000px;
-    padding: 80px 20px 20px;
+    padding: 80px 40px 40px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -85,23 +85,26 @@ body {
 .row {
     display: flex;
     gap: 10px;
-    justify-content: flex-start;
+    justify-content: center; /* <-- instead of flex-start */
     flex-wrap: wrap;
     position: relative;
 }
+
 
 .gallery-img {
     max-height: 380px;
     object-fit: cover;
     flex-shrink: 0;
     transition: transform 0.3s ease;
-    border-radius: 4px;
+    border-radius: 0; /* <- make it sharp */
 }
 
+
 .gallery-img:hover {
-    transform: scale(1.02) rotate(1deg);
+    transform: scale(1.03);
     z-index: 10;
 }
+
 
 /* Optional collage randomness */
 .offset {
