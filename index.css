@@ -93,3 +93,55 @@ body {
     height: 100vh; /* Ensures both images match in height */
     object-fit: cover; /* Crops and fills space if needed */
 }
+/* Recent Highlights Section */
+.recent-highlights {
+    padding: 60px 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.recent-highlights h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Grid Layout */
+.highlights-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Individual Highlight Card */
+.highlight-item {
+    max-width: 300px;
+    text-align: left;
+}
+
+/* Highlight Images */
+.highlight-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.highlight-item img:hover {
+    transform: scale(1.02);
+}
+
+/* Highlight Text */
+.highlight-item p {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 1.4;
+    font-family: 'Arial', sans-serif;
+    color: #ccc;
+}
