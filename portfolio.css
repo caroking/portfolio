@@ -73,40 +73,37 @@ body {
     letter-spacing: 1.2px;
 }
 
+/* Replace from here on */
 .gallery {
-    max-width: 1000px;
-    padding: 80px 40px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 50px 60px;
+    padding: 100px 60px 60px;
+    justify-content: center;
+    align-content: start;
+    max-width: 1600px;
     margin: 0 auto;
-}
-
-.row {
-    display: flex;
-    gap: 10px;
-    justify-content: center; /* <-- instead of flex-start */
-    flex-wrap: wrap;
     position: relative;
 }
 
-
+/* Base image styling */
 .gallery-img {
-    max-height: 380px;
-    object-fit: cover;
-    flex-shrink: 0;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
     transition: transform 0.3s ease;
-    border-radius: 0; /* <- make it sharp */
+    border-radius: 0;
 }
 
-
+/* Hover effect */
 .gallery-img:hover {
     transform: scale(1.03);
     z-index: 10;
 }
 
-
-/* Optional collage randomness */
+/* Optional: funky randomness */
 .offset {
     margin-top: 30px;
 }
@@ -114,11 +111,20 @@ body {
     width: 140px;
 }
 .wide {
-    width: 65%;
+    width: 100%;
 }
 .float-left {
-    align-self: flex-start;
+    justify-self: start;
 }
 .float-right {
-    align-self: flex-end;
+    justify-self: end;
 }
+
+/* Extra random scatter styling */
+.rotate-left {
+    transform: rotate(-1.5deg);
+}
+.rotate-right {
+    transform: rotate(2deg);
+}
+
