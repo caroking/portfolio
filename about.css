@@ -117,46 +117,19 @@
 
 .contact-form-wrapper {
     position: absolute;
-    bottom: 50px;
-    right: 50px;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    bottom: 250px;  /* ⬆ lifted dramatically */
+    right: 100px;   /* ⬅ pulled in from edge */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     color: #111;
-    max-width: 300px;
+    max-width: 320px;
     font-family: 'Inter', sans-serif;
-    font-size: 0.9em;
+    font-size: 0.95em;
+    z-index: 10;
 }
 
-.contact-form-wrapper form input,
-.contact-form-wrapper form textarea {
-    width: 100%;
-    margin-top: 4px;
-    margin-bottom: 12px;
-    padding: 6px 8px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-family: inherit;
-}
-
-.contact-form-wrapper {
-    position: absolute;
-    bottom: 120px;  /* ⬆ bump it up */
-    right: 80px;    /* ⬅ pull it slightly inward */
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    color: #111;
-    max-width: 300px;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9em;
-}
-
-.contact-form-wrapper form button:hover {
-    background-color: #333;
-}
 
 
 
