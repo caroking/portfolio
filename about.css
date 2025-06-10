@@ -116,18 +116,19 @@
 }
 
 .contact-form-wrapper {
-    position: absolute;
-    bottom: 250px;  /* ⬆ lifted dramatically */
-    right: 100px;   /* ⬅ pulled in from edge */
-    background-color: rgba(255, 255, 255, 0.9);
+    position: relative; /* ⬅ changed from absolute so it's part of the normal flow */
+    margin: 80px auto 0 auto; /* ⬅ pushes it down from the top a bit */
+    background-color: rgba(255, 255, 255, 0.88); /* ⬅ semi-transparent white box */
     padding: 24px;
-    border-radius: 14px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     color: #111;
-    max-width: 320px;
+    max-width: 340px;
     font-family: 'Inter', sans-serif;
     font-size: 0.95em;
-    z-index: 10;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    float: right; /* ⬅ stick it to the right side of the content area */
+    margin-right: 5%; /* ⬅ spacing from the right edge */
 }
 
 
