@@ -72,16 +72,20 @@ body {
     opacity: 0.7;
     letter-spacing: 1.2px;
 }
-.portfolio-title {
+portfolio-title {
+    margin-top: 120px; /* pushes it below top bar */
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.6rem;
+    letter-spacing: 1.5em; /* spreads out the letters */
     color: #222;
     filter: blur(1px);
     opacity: 0.7;
     transition: all 0.4s ease;
-    font-weight: 500;
-    letter-spacing: 3px;
+    font-weight: 400;
+    font-family: 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
 }
+
 .portfolio-title:hover {
     filter: blur(0);
     opacity: 1;
