@@ -150,8 +150,8 @@ body {
     .top-bar {
         flex-direction: column;
         align-items: flex-start;
-        padding: 10px 15px;
-        font-size: 10px;
+        padding: 15px 20px;
+        height: auto;
     }
 
     .top-bar .name,
@@ -159,14 +159,30 @@ body {
     .top-bar .right {
         justify-content: flex-start;
         width: 100%;
-        padding: 5px 0;
+        padding: 6px 0;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .top-bar .center {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .top-bar .right {
+        justify-content: flex-end;
+    }
+
+    .top-bar .right a {
+        margin: 0 6px 6px 0;
+        display: inline-block;
     }
 
     .portfolio-gallery {
         flex-direction: column;
         align-items: center;
         height: auto;
-        padding: 100px 10px 20px; /* Extra top padding for fixed nav */
+        padding: 100px 10px 20px; /* Top padding accounts for fixed top bar */
     }
 
     .portfolio-gallery img {
@@ -193,4 +209,3 @@ body {
         font-size: 12px;
     }
 }
-
