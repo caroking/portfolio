@@ -145,3 +145,52 @@ body {
     font-family: 'Arial', sans-serif;
     color: #ccc;
 }
+/* 📱 Mobile Responsiveness (iPhones + small screens) */
+@media (max-width: 600px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+        font-size: 10px;
+    }
+
+    .top-bar .name,
+    .top-bar .center,
+    .top-bar .right {
+        justify-content: flex-start;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .portfolio-gallery {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 100px 10px 20px; /* Extra top padding for fixed nav */
+    }
+
+    .portfolio-gallery img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .highlights-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .highlight-item {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .recent-highlights h2 {
+        font-size: 18px;
+    }
+
+    .highlight-item p {
+        font-size: 12px;
+    }
+}
+
