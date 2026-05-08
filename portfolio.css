@@ -1,147 +1,388 @@
+/* ------------------------------
+GLOBAL
+------------------------------ */
 
-body {
-    background-color: white;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: Arial, sans-serif;
 }
 
-/* Top Bar */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f8f6;
+    color: #111;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+    overflow-x: hidden;
+}
+
+/* Text Highlight */
+
+::selection {
+    background: black;
+    color: white;
+}
+
+/* ------------------------------
+TOP BAR
+------------------------------ */
+
 .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 15px 30px;
-    font-size: 12px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
     position: fixed;
     top: 0;
     left: 0;
-    background: black;
-    color: white;
-    z-index: 100;
-    white-space: nowrap;
-    border-bottom: 1px solid #ddd;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 32px;
+
+    z-index: 1000;
+
+    background: rgba(248, 248, 246, 0.92);
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
+
 .top-bar div {
-    flex: 1;
     display: flex;
     align-items: center;
+    flex: 1;
 }
+
 .top-bar .name {
     justify-content: flex-start;
+    gap: 10px;
 }
-.top-bar .name a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-.top-bar .tagline {
-    font-size: 10px;
-    margin-left: 10px;
-    font-weight: normal;
-    opacity: 0.8;
-    color: white;
-}
+
 .top-bar .center {
     justify-content: center;
-    flex-grow: 1;
-    text-align: center;
 }
-.top-bar .center a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+
 .top-bar .right {
     justify-content: flex-end;
-    padding-right: 20px;
+    gap: 20px;
 }
+
 .top-bar a {
-    color: white;
+    color: #111;
     text-decoration: none;
-    margin: 0 12px;
-    transition: opacity 0.3s ease, letter-spacing 0.2s ease;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
 }
+
 .top-bar a:hover {
-    opacity: 0.7;
-    letter-spacing: 1.2px;
+    opacity: 0.5;
+    transform: translateY(-1px);
 }
+
+.top-bar .name a {
+    font-weight: 600;
+}
+
+.top-bar .tagline {
+    opacity: 0.45;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+}
+
+/* ------------------------------
+PORTFOLIO TITLE
+------------------------------ */
+
 .portfolio-title {
-    margin-top: 150px;
-    text-align: center;
-    font-size: 3rem;
-    letter-spacing: 1.2em;
-    color: #222;
-    filter: blur(1px);
-    opacity: 0.7;
-    transition: filter 0.4s ease, opacity 0.4s ease;
-    font-weight: 400;
-    font-family: 'Helvetica Neue', sans-serif;
-    text-transform: uppercase;
-    will-change: filter, opacity;
+    width: 100%;
+
+    margin-top: 140px;
+    margin-bottom: 90px;
+
+    padding-left: 6vw;
+    padding-right: 4vw;
+
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.88;
+
+    font-weight: 500;
+
+    letter-spacing: -0.06em;
+
+    text-align: left;
+
+    color: #111;
+
+    opacity: 0.95;
+
+    transition: opacity 0.3s ease;
 }
+
 .portfolio-title:hover {
-    filter: blur(0px);
     opacity: 1;
 }
-/* Replace from here on */
+
+/* Optional subtitle under title */
+
+.portfolio-subtitle {
+    padding-left: 6vw;
+
+    margin-top: -60px;
+    margin-bottom: 100px;
+
+    font-size: 0.95rem;
+    max-width: 500px;
+
+    line-height: 1.5;
+
+    color: rgba(0,0,0,0.6);
+}
+
+/* ------------------------------
+GALLERY LAYOUT
+------------------------------ */
+
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 50px 60px;
-    padding: 100px 60px 60px;
-    justify-content: center;
-    align-content: start;
-    max-width: 1600px;
+    width: 92vw;
+    max-width: 1800px;
+
     margin: 0 auto;
+    padding-bottom: 140px;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 24px;
+
+    grid-auto-flow: dense;
+}
+
+/* ------------------------------
+GALLERY ITEMS
+------------------------------ */
+
+.gallery-item {
     position: relative;
-}
 
-/* Base image styling */
-.gallery-img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: contain;
+    overflow: hidden;
+
     transition: transform 0.3s ease;
-    border-radius: 0;
 }
 
-/* Hover effect */
-.gallery-img:hover {
-    transform: scale(1.03);
+/* Image Styling */
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.45s ease,
+        opacity 0.3s ease;
+
+    will-change: transform;
+
+    image-rendering: auto;
+}
+
+/* Hover Effect */
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.045);
+    filter: brightness(1.04);
+}
+
+/* Slight movement on hover */
+
+.gallery-item:hover {
     z-index: 10;
 }
 
-/* Optional: funky randomness */
-.offset {
-    margin-top: 30px;
-}
-.tiny {
-    width: 140px;
-}
-.wide {
-    width: 100%;
-}
-.float-left {
-    justify-self: start;
-}
-.float-right {
-    justify-self: end;
+/* ------------------------------
+GRID SIZE VARIATIONS
+------------------------------ */
+
+.small {
+    grid-column: span 3;
 }
 
-/* Extra random scatter styling */
+.medium {
+    grid-column: span 5;
+}
+
+.large {
+    grid-column: span 7;
+}
+
+.full {
+    grid-column: span 12;
+}
+
+/* Vertical emphasis */
+
+.tall {
+    grid-row: span 2;
+}
+
+/* ------------------------------
+OFFSETS / RHYTHM
+------------------------------ */
+
+.offset-up {
+    margin-top: -60px;
+}
+
+.offset-down {
+    margin-top: 80px;
+}
+
+.offset-soft {
+    margin-top: 35px;
+}
+
+/* ------------------------------
+ROTATIONS
+------------------------------ */
+
 .rotate-left {
-    transform: rotate(-1.5deg);
-}
-.rotate-right {
-    transform: rotate(2deg);
+    transform: rotate(-1deg);
 }
 
+.rotate-right {
+    transform: rotate(1deg);
+}
+
+/* Keep hover smooth with rotations */
+
+.gallery-item:hover .rotate-left,
+.gallery-item:hover .rotate-right {
+    transform: scale(1.04);
+}
+
+/* ------------------------------
+CAPTIONS
+------------------------------ */
+
+.caption {
+    margin-top: 10px;
+
+    font-size: 11px;
+    letter-spacing: 0.04em;
+
+    text-transform: uppercase;
+
+    color: rgba(0,0,0,0.5);
+}
+
+/* ------------------------------
+ABOUT / TEXT BLOCKS
+------------------------------ */
+
+.text-block {
+    grid-column: span 4;
+
+    padding: 30px 10px 30px 0;
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    color: rgba(0,0,0,0.75);
+
+    max-width: 500px;
+}
+
+/* ------------------------------
+RESPONSIVE
+------------------------------ */
+
+@media (max-width: 1200px) {
+
+    .gallery {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .large {
+        grid-column: span 8;
+    }
+
+    .medium {
+        grid-column: span 5;
+    }
+
+    .small {
+        grid-column: span 4;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .top-bar {
+        padding: 16px 18px;
+        font-size: 10px;
+    }
+
+    .top-bar .tagline {
+        display: none;
+    }
+
+    .portfolio-title {
+        margin-top: 120px;
+
+        font-size: 3rem;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .portfolio-subtitle {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        margin-top: -30px;
+        margin-bottom: 70px;
+    }
+
+    .gallery {
+        width: 94vw;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 16px;
+    }
+
+    .small,
+    .medium,
+    .large,
+    .full {
+        grid-column: span 2;
+    }
+
+    .offset-up,
+    .offset-down,
+    .offset-soft {
+        margin-top: 0;
+    }
+
+    .text-block {
+        grid-column: span 2;
+        padding: 20px 0;
+    }
+}
