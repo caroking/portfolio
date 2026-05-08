@@ -24,7 +24,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Text Highlight */
+/* Selection */
 
 ::selection {
     background: black;
@@ -52,7 +52,7 @@ TOP BAR
 
     backdrop-filter: blur(12px);
 
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 
     z-index: 999;
 
@@ -105,7 +105,7 @@ TOP BAR
 }
 
 /* ---------------------------------
-PORTFOLIO TITLE
+TITLE
 --------------------------------- */
 
 .portfolio-title {
@@ -124,11 +124,11 @@ PORTFOLIO TITLE
 
     font-weight: 500;
 
-    color: #111;
-
     text-align: left;
 
-    opacity: 0.95;
+    color: #111;
+
+    opacity: 0.96;
 
     transition: opacity 0.3s ease;
 }
@@ -137,7 +137,7 @@ PORTFOLIO TITLE
     opacity: 1;
 }
 
-/* Optional small text */
+/* Optional intro text */
 
 .portfolio-subtitle {
     padding-left: 5vw;
@@ -145,12 +145,12 @@ PORTFOLIO TITLE
     margin-top: -40px;
     margin-bottom: 80px;
 
-    max-width: 500px;
+    max-width: 520px;
 
     font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.6;
 
-    color: rgba(0,0,0,0.6);
+    color: rgba(0,0,0,0.62);
 }
 
 /* ---------------------------------
@@ -166,16 +166,16 @@ GALLERY
 
     display: grid;
 
-    /* FOUR ACROSS */
-    grid-template-columns: repeat(4, 1fr);
+    /* THREE COLUMNS */
+    grid-template-columns: repeat(3, 1fr);
 
-    gap: 10px;
+    gap: 8px;
 
     align-items: start;
 }
 
 /* ---------------------------------
-GALLERY ITEM
+GALLERY ITEMS
 --------------------------------- */
 
 .gallery-item {
@@ -184,6 +184,12 @@ GALLERY ITEM
     overflow: hidden;
 
     background: white;
+}
+
+/* Featured larger image */
+
+.featured {
+    grid-column: span 2;
 }
 
 /* ---------------------------------
@@ -200,8 +206,8 @@ IMAGES
 
     transition:
         transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-        opacity 0.3s ease,
-        filter 0.3s ease;
+        filter 0.3s ease,
+        opacity 0.3s ease;
 
     will-change: transform;
 
@@ -211,41 +217,8 @@ IMAGES
 /* Hover */
 
 .gallery-item:hover .gallery-img {
-    transform: scale(1.035);
+    transform: scale(1.03);
     filter: brightness(1.02);
-}
-
-/* ---------------------------------
-SUBTLE OFFSETS
---------------------------------- */
-
-.offset-up {
-    transform: translateY(-22px);
-}
-
-.offset-down {
-    transform: translateY(28px);
-}
-
-/* ---------------------------------
-ROTATION
---------------------------------- */
-
-.rotate-left {
-    transform: rotate(-0.7deg);
-}
-
-.rotate-right {
-    transform: rotate(0.7deg);
-}
-
-/* Prevent weird hover conflicts */
-
-.gallery-item:hover .rotate-left,
-.gallery-item:hover .rotate-right,
-.gallery-item:hover.offset-up,
-.gallery-item:hover.offset-down {
-    transform: scale(1.035);
 }
 
 /* ---------------------------------
@@ -260,7 +233,7 @@ CAPTIONS
 
     text-transform: uppercase;
 
-    color: rgba(0,0,0,0.5);
+    color: rgba(0,0,0,0.45);
 }
 
 /* ---------------------------------
@@ -270,7 +243,7 @@ TEXT BLOCKS
 .text-block {
     padding: 30px 10px 30px 0;
 
-    max-width: 500px;
+    max-width: 520px;
 
     font-size: 1rem;
     line-height: 1.7;
@@ -285,27 +258,18 @@ RESPONSIVE
 @media (max-width: 1100px) {
 
     .gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 800px) {
-
-    .gallery {
         grid-template-columns: repeat(2, 1fr);
-
-        gap: 8px;
     }
 
-    .portfolio-title {
-        font-size: 3.5rem;
+    .featured {
+        grid-column: span 2;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     .top-bar {
-        padding: 14px 18px;
+        padding: 15px 18px;
     }
 
     .top-bar .tagline {
@@ -315,7 +279,7 @@ RESPONSIVE
     .portfolio-title {
         margin-top: 120px;
 
-        font-size: 2.7rem;
+        font-size: 3rem;
 
         padding-left: 20px;
         padding-right: 20px;
@@ -324,6 +288,8 @@ RESPONSIVE
     .portfolio-subtitle {
         padding-left: 20px;
         padding-right: 20px;
+
+        margin-bottom: 60px;
     }
 
     .gallery {
@@ -331,11 +297,10 @@ RESPONSIVE
 
         grid-template-columns: 1fr;
 
-        gap: 12px;
+        gap: 10px;
     }
 
-    .offset-up,
-    .offset-down {
-        transform: none;
+    .featured {
+        grid-column: span 1;
     }
 }
