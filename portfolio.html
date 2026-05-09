@@ -1,61 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="portfolio.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="portfolio.css">
 </head>
+
 <body>
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="name">
-            <a href="about.html">Caroline King</a> 
-            <span class="tagline">Filmmaker, Photographer, Programmer</span>
-        </div>
-        <div class="center"><a href="index.html">HOME</a></div>
-        <div class="right">
-            <a href="https://www.instagram.com/caroline____king/" target="_blank">@caroline____king</a>
-            <a href="mailto:carolinegkingart@email.com" class="email">carolinegkingart@gmail.com</a>
-        </div>
+<!-- TOP BAR (UNCHANGED) -->
+<div class="top-bar">
+    <div class="name">
+        <a href="about.html">Caroline King</a>
+        <span class="tagline">Filmmaker, Photographer, Programmer</span>
     </div>
-    <h2 class="portfolio-title">PORTFOLIO</h2>
-  <!-- Portfolio Gallery -->
-<!-- Portfolio Gallery -->
-<!-- Portfolio Gallery -->
+    <div class="center"><a href="index.html">HOME</a></div>
+    <div class="right">
+        <a href="https://www.instagram.com/caroline____king/" target="_blank">@caroline____king</a>
+        <a href="mailto:carolinegkingart@email.com">carolinegkingart@gmail.com</a>
+    </div>
+</div>
+
+<h2 class="portfolio-title">PORTFOLIO</h2>
+
 <div class="gallery">
 
     <!-- OPENING ROW -->
 
     <div class="opening-row">
 
-        <!-- BLOOMS SERIES -->
-
         <div class="series large-series">
-
             <img src="Blooms 2026.jpg" class="series-img active">
-
             <img src="cloud.jpg" class="series-img">
-
             <img src="daffodil.JPG" class="series-img">
-
-            <button class="series-next">&#10095;</button>
-
         </div>
 
-        <!-- BUILDING SERIES -->
-
         <div class="series small-series">
-
             <img src="Bk Building.jpg" class="series-img active">
-
             <img src="Bk Church.jpg" class="series-img">
-
             <img src="Announcer.JPEG" class="series-img">
-
-            <button class="series-next">&#10095;</button>
-
         </div>
 
     </div>
@@ -63,39 +47,21 @@
     <!-- SERIES -->
 
     <div class="series vertical-series">
-
         <img src="domarabiamt3.jpg" class="series-img active">
-
         <img src="domarabiamt2.JPG" class="series-img">
-
         <img src="domarabiamt.JPG" class="series-img">
-
-        <button class="series-next">&#10095;</button>
-
     </div>
 
     <div class="series vertical-series">
-
         <img src="AriainRed.JPEG" class="series-img active">
-
         <img src="aria1.jpg" class="series-img">
-
         <img src="Dani.JPEG" class="series-img">
-
-        <button class="series-next">&#10095;</button>
-
     </div>
 
     <div class="series vertical-series">
-
         <img src="FunnyBunny.jpeg" class="series-img active">
-
         <img src="PrinceCharming.jpg" class="series-img">
-
         <img src="Grinch.jpg" class="series-img">
-
-        <button class="series-next">&#10095;</button>
-
     </div>
 
 </div>
@@ -105,7 +71,6 @@
 document.querySelectorAll(".series").forEach(series => {
 
     const images = series.querySelectorAll(".series-img");
-
     let current = 0;
 
     series.addEventListener("click", (e) => {
@@ -116,13 +81,9 @@ document.querySelectorAll(".series").forEach(series => {
 
         images[current].classList.remove("active");
 
-        // LEFT side = previous
         if (clickX < width / 2) {
             current = (current - 1 + images.length) % images.length;
-        }
-
-        // RIGHT side = next
-        else {
+        } else {
             current = (current + 1) % images.length;
         }
 
@@ -132,10 +93,6 @@ document.querySelectorAll(".series").forEach(series => {
 });
 
 </script>
-});
-
-</script>
-
 
 </body>
 </html>
