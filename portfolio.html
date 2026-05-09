@@ -23,104 +23,102 @@
     <h2 class="portfolio-title">PORTFOLIO</h2>
   <!-- Portfolio Gallery -->
 <!-- Portfolio Gallery -->
+<!-- Portfolio Gallery -->
 <div class="gallery">
 
-    <!-- SERIES 1 -->
-    <div class="series" onclick="openGallery(0, 0)">
-        <img src="Blooms 2026.jpg" class="series-cover">
+    <!-- OPENING ROW -->
+
+    <div class="opening-row">
+
+        <!-- BLOOMS SERIES -->
+
+        <div class="series large-series">
+
+            <img src="Blooms 2026.jpg" class="series-img active">
+
+            <img src="cloud.jpg" class="series-img">
+
+            <img src="daffodil.JPG" class="series-img">
+
+            <button class="series-next">&#10095;</button>
+
+        </div>
+
+        <!-- BUILDING SERIES -->
+
+        <div class="series small-series">
+
+            <img src="Bk Building.jpg" class="series-img active">
+
+            <img src="Bk Church.jpg" class="series-img">
+
+            <img src="Announcer.JPEG" class="series-img">
+
+            <button class="series-next">&#10095;</button>
+
+        </div>
+
     </div>
 
-    <!-- SERIES 2 -->
-    <div class="series" onclick="openGallery(1, 0)">
-        <img src="domarabiamt3.jpg" class="series-cover">
+    <!-- SERIES -->
+
+    <div class="series vertical-series">
+
+        <img src="domarabiamt3.jpg" class="series-img active">
+
+        <img src="domarabiamt2.JPG" class="series-img">
+
+        <img src="domarabiamt.JPG" class="series-img">
+
+        <button class="series-next">&#10095;</button>
+
     </div>
 
-    <!-- SERIES 3 -->
-    <div class="series" onclick="openGallery(2, 0)">
-        <img src="Bk Building.jpg" class="series-cover">
+    <div class="series vertical-series">
+
+        <img src="AriainRed.JPEG" class="series-img active">
+
+        <img src="aria1.jpg" class="series-img">
+
+        <img src="Dani.JPEG" class="series-img">
+
+        <button class="series-next">&#10095;</button>
+
     </div>
 
-</div>
+    <div class="series vertical-series">
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
+        <img src="FunnyBunny.jpeg" class="series-img active">
 
-    <span class="close" onclick="closeGallery()">&times;</span>
+        <img src="PrinceCharming.jpg" class="series-img">
 
-    <img class="lightbox-img" id="lightbox-img">
+        <img src="Grinch.jpg" class="series-img">
 
-    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        <button class="series-next">&#10095;</button>
+
+    </div>
 
 </div>
 
 <script>
-const galleries = [
 
-    // SERIES 1
-    [
-        "Blooms 2026.jpg",
-        "Bk Church.jpg",
-        "cloud.jpg",
-        "daffodil.JPG"
-    ],
+document.querySelectorAll(".series").forEach(series => {
 
-    // SERIES 2
-    [
-        "domarabiamt3.jpg",
-        "domarabiamt2.JPG",
-        "domarabiamt.JPG",
-        "AriainRed.JPEG"
-    ],
+    const images = series.querySelectorAll(".series-img");
+    const nextBtn = series.querySelector(".series-next");
 
-    // SERIES 3
-    [
-        "Bk Building.jpg",
-        "Announcer.JPEG",
-        "PrinceCharming.jpg"
-    ]
+    let current = 0;
 
-];
+    nextBtn.addEventListener("click", () => {
 
-let currentGallery = 0;
-let currentImage = 0;
+        images[current].classList.remove("active");
 
-function openGallery(galleryIndex, imageIndex) {
+        current = (current + 1) % images.length;
 
-    currentGallery = galleryIndex;
-    currentImage = imageIndex;
+        images[current].classList.add("active");
+    });
+});
 
-    document.getElementById("lightbox").style.display = "flex";
-
-    updateImage();
-}
-
-function closeGallery() {
-    document.getElementById("lightbox").style.display = "none";
-}
-
-function changeSlide(direction) {
-
-    currentImage += direction;
-
-    const gallery = galleries[currentGallery];
-
-    if (currentImage < 0) {
-        currentImage = gallery.length - 1;
-    }
-
-    if (currentImage >= gallery.length) {
-        currentImage = 0;
-    }
-
-    updateImage();
-}
-
-function updateImage() {
-
-    document.getElementById("lightbox-img").src =
-        galleries[currentGallery][currentImage];
-}
 </script>
 
 
