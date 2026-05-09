@@ -1,3 +1,4 @@
+
 /* ---------------------------------
 GLOBAL
 --------------------------------- */
@@ -24,15 +25,13 @@ body {
     overflow-x: hidden;
 }
 
-/* Selection */
-
 ::selection {
     background: black;
     color: white;
 }
 
 /* ---------------------------------
-TOP BAR
+TOP BAR (UNCHANGED)
 --------------------------------- */
 
 .top-bar {
@@ -85,9 +84,7 @@ TOP BAR
     text-decoration: none;
     color: #111;
 
-    transition:
-        opacity 0.25s ease,
-        transform 0.25s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .top-bar a:hover {
@@ -110,7 +107,6 @@ TITLE
 
 .portfolio-title {
     width: 100%;
-
     margin-top: 140px;
     margin-bottom: 70px;
 
@@ -129,38 +125,14 @@ TITLE
     color: #111;
 
     opacity: 0.96;
-
-    transition: opacity 0.3s ease;
-}
-
-.portfolio-title:hover {
-    opacity: 1;
-}
-
-/* Optional intro text */
-
-.portfolio-subtitle {
-    padding-left: 5vw;
-
-    margin-top: -40px;
-    margin-bottom: 80px;
-
-    max-width: 520px;
-
-    font-size: 0.95rem;
-    line-height: 1.6;
-
-    color: rgba(0,0,0,0.62);
 }
 
 /* ---------------------------------
-GALLERY
+GALLERY LAYOUT
 --------------------------------- */
 
 .gallery {
-
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,143 +147,57 @@ OPENING ROW
 --------------------------------- */
 
 .opening-row {
-
     width: 90vw;
     max-width: 1250px;
 
     display: flex;
+    gap: 20px;
 
     align-items: flex-start;
-
-    gap: 20px;
 }
 
-/* Blooms image */
-
 .large-series {
-
     flex: 1.45;
 }
 
-/* Building image */
-
 .small-series {
-
     flex: 0.9;
 }
 
 /* ---------------------------------
-VERTICAL SERIES
+SERIES BLOCKS
 --------------------------------- */
 
-.vertical-series {
+.series {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
 
+.vertical-series {
     width: 42vw;
     max-width: 620px;
     min-width: 280px;
 }
 
 /* ---------------------------------
-SERIES
---------------------------------- */
-
-.series {
-
-    position: relative;
-}
-
-/* ---------------------------------
-IMAGE WRAPPER
---------------------------------- */
-
-.series-frame {
-
-    position: relative;
-
-    width: 100%;
-}
-
-/* ---------------------------------
-IMAGES
+SLIDESHOW IMAGES (FIXED SYSTEM)
 --------------------------------- */
 
 .series-img {
-
     width: 100%;
     height: auto;
+    display: none;
+}
 
+.series-img.active {
     display: block;
-
-    object-fit: contain;
 }
 
-/* slideshow images */
-
-.slideshow-image {
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    opacity: 0;
-
-    transition: opacity 1s ease;
-
-    pointer-events: none;
-}
-
-/* active image */
-
-.slideshow-image.active {
-
-    opacity: 1;
-
-    position: relative;
-
-    pointer-events: auto;
-}
-
-/* ---------------------------------
-HOVER
---------------------------------- */
-
+/* subtle hover feedback */
 .series:hover .series-img.active {
-
-    transform: scale(1.005);
-
+    transform: scale(1.01);
     transition: transform 0.4s ease;
-}
- 
-
-/* ---------------------------------
-CAPTIONS
---------------------------------- */
-
-.caption {
-    margin-top: 8px;
-
-    font-size: 10px;
-    letter-spacing: 0.05em;
-
-    text-transform: uppercase;
-
-    color: rgba(0,0,0,0.45);
-}
-
-/* ---------------------------------
-TEXT BLOCKS
---------------------------------- */
-
-.text-block {
-    padding: 30px 10px 30px 0;
-
-    max-width: 520px;
-
-    font-size: 1rem;
-    line-height: 1.7;
-
-    color: rgba(0,0,0,0.72);
 }
 
 /* ---------------------------------
@@ -321,21 +207,12 @@ RESPONSIVE
 @media (max-width: 900px) {
 
     .opening-row {
-
         flex-direction: column;
-
         width: 92vw;
     }
 
     .vertical-series {
-
         width: 92vw;
-    }
-
-    .large-series,
-    .small-series {
-
-        width: 100%;
     }
 }
 
@@ -351,30 +228,12 @@ RESPONSIVE
 
     .portfolio-title {
         margin-top: 120px;
-
         font-size: 3rem;
-
         padding-left: 20px;
         padding-right: 20px;
-    }
-
-    .portfolio-subtitle {
-        padding-left: 20px;
-        padding-right: 20px;
-
-        margin-bottom: 60px;
     }
 
     .gallery {
-
         gap: 70px;
     }
-
-    .series-next {
-
-        opacity: 1;
-    }
-    .series {
-    cursor: pointer;
-}
 }
