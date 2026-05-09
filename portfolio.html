@@ -105,18 +105,33 @@
 document.querySelectorAll(".series").forEach(series => {
 
     const images = series.querySelectorAll(".series-img");
-    const nextBtn = series.querySelector(".series-next");
 
     let current = 0;
 
-    nextBtn.addEventListener("click", () => {
+    series.addEventListener("click", (e) => {
+
+        const rect = series.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const width = rect.width;
 
         images[current].classList.remove("active");
 
-        current = (current + 1) % images.length;
+        // LEFT side = previous
+        if (clickX < width / 2) {
+            current = (current - 1 + images.length) % images.length;
+        }
+
+        // RIGHT side = next
+        else {
+            current = (current + 1) % images.length;
+        }
 
         images[current].classList.add("active");
     });
+
+});
+
+</script>
 });
 
 </script>
