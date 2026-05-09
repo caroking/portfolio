@@ -22,105 +22,106 @@
     </div>
     <h2 class="portfolio-title">PORTFOLIO</h2>
   <!-- Portfolio Gallery -->
+<!-- Portfolio Gallery -->
 <div class="gallery">
 
-    <div class="gallery-item featured">
-        <img src="Blooms 2026.jpg" alt="Blooms 2026" class="gallery-img">
+    <!-- SERIES 1 -->
+    <div class="series" onclick="openGallery(0, 0)">
+        <img src="Blooms 2026.jpg" class="series-cover">
     </div>
 
-    <div class="gallery-item">
-        <img src="Bk Building.jpg" alt="BK Building" class="gallery-img">
+    <!-- SERIES 2 -->
+    <div class="series" onclick="openGallery(1, 0)">
+        <img src="domarabiamt3.jpg" class="series-cover">
     </div>
 
-    <div class="gallery-item">
-        <img src="Bk Church.jpg" alt="BK Church" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="domarabiamt3.jpg" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="aria1.jpg" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="claire1.jpg" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="domarabiamt2.JPG" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="kaylee1.jpg" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="daffodil.JPG" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="Dani.JPEG" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="Mitchell.JPEG" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="caro1.JPEG" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="cloud.jpg" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="nomad1.JPEG" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="domarabiamt.JPG" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="Announcer.JPEG" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="AriainRed.JPEG" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="Balloons!.JPG" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="ExpiredLillyPads.JPEG" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="FunnyBunny.jpeg" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="grannypoo.jpeg" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="Grinch.jpg" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="KaiKAi.jpeg" class="gallery-img">
-    </div>
-
-    <div class="gallery-item">
-        <img src="PrinceCharming.jpg" class="gallery-img">
+    <!-- SERIES 3 -->
+    <div class="series" onclick="openGallery(2, 0)">
+        <img src="Bk Building.jpg" class="series-cover">
     </div>
 
 </div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+
+    <span class="close" onclick="closeGallery()">&times;</span>
+
+    <img class="lightbox-img" id="lightbox-img">
+
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+</div>
+
+<script>
+const galleries = [
+
+    // SERIES 1
+    [
+        "Blooms 2026.jpg",
+        "Bk Church.jpg",
+        "cloud.jpg",
+        "daffodil.JPG"
+    ],
+
+    // SERIES 2
+    [
+        "domarabiamt3.jpg",
+        "domarabiamt2.JPG",
+        "domarabiamt.JPG",
+        "AriainRed.JPEG"
+    ],
+
+    // SERIES 3
+    [
+        "Bk Building.jpg",
+        "Announcer.JPEG",
+        "PrinceCharming.jpg"
+    ]
+
+];
+
+let currentGallery = 0;
+let currentImage = 0;
+
+function openGallery(galleryIndex, imageIndex) {
+
+    currentGallery = galleryIndex;
+    currentImage = imageIndex;
+
+    document.getElementById("lightbox").style.display = "flex";
+
+    updateImage();
+}
+
+function closeGallery() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+function changeSlide(direction) {
+
+    currentImage += direction;
+
+    const gallery = galleries[currentGallery];
+
+    if (currentImage < 0) {
+        currentImage = gallery.length - 1;
+    }
+
+    if (currentImage >= gallery.length) {
+        currentImage = 0;
+    }
+
+    updateImage();
+}
+
+function updateImage() {
+
+    document.getElementById("lightbox-img").src =
+        galleries[currentGallery][currentImage];
+}
+</script>
 
 
 </body>
