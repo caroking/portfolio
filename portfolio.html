@@ -95,13 +95,18 @@ document.querySelectorAll(".series").forEach(series => {
 
     const images = Array.from(series.querySelectorAll(".series-img"));
 
-    // shuffle order on load
+    // shuffle
     const shuffled = shuffle(images);
 
-    // re-append in new order
+    // reset all active states FIRST
+    shuffled.forEach(img => img.classList.remove("active"));
+
+    // re-append in shuffled order
     shuffled.forEach(img => series.appendChild(img));
 
+    // set first image active AFTER shuffle
     let current = 0;
+    shuffled[current].classList.add("active");
 
     series.addEventListener("click", (e) => {
 
