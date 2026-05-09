@@ -199,7 +199,33 @@ SLIDESHOW IMAGES (FIXED SYSTEM)
     transform: scale(1.01);
     transition: transform 0.4s ease;
 }
+.vertical-series {
+    width: 42vw;
+    max-width: 620px;
+    min-width: 280px;
 
+    /* KEY FIX */
+    aspect-ratio: 4 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* make images fill a stable visual frame */
+.vertical-series .series-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* OPENING ROW gets slightly more “editorial weight” */
+.large-series {
+    aspect-ratio: 4 / 3;
+}
+
+.small-series {
+    aspect-ratio: 4 / 5;
+}
 /* ---------------------------------
 RESPONSIVE
 --------------------------------- */
