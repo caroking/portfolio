@@ -68,9 +68,24 @@
 
 <script>
 
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 document.querySelectorAll(".series").forEach(series => {
 
-    const images = series.querySelectorAll(".series-img");
+    const images = Array.from(series.querySelectorAll(".series-img"));
+
+    // shuffle order on load
+    const shuffled = shuffle(images);
+
+    // re-append in new order
+    shuffled.forEach(img => series.appendChild(img));
+
     let current = 0;
 
     series.addEventListener("click", (e) => {
@@ -79,15 +94,15 @@ document.querySelectorAll(".series").forEach(series => {
         const clickX = e.clientX - rect.left;
         const width = rect.width;
 
-        images[current].classList.remove("active");
+        shuffled[current].classList.remove("active");
 
         if (clickX < width / 2) {
-            current = (current - 1 + images.length) % images.length;
+            current = (current - 1 + shuffled.length) % shuffled.length;
         } else {
-            current = (current + 1) % images.length;
+            current = (current + 1) % shuffled.length;
         }
 
-        images[current].classList.add("active");
+        shuffled[current].classList.add("active");
     });
 
 });
