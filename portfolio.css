@@ -157,10 +157,6 @@ TITLE
 GALLERY
 --------------------------------- */
 
-/* ---------------------------------
-GALLERY
---------------------------------- */
-
 .gallery {
 
     width: 100%;
@@ -169,7 +165,7 @@ GALLERY
     flex-direction: column;
     align-items: center;
 
-    gap: 120px;
+    gap: 110px;
 
     padding-bottom: 140px;
 }
@@ -181,13 +177,38 @@ OPENING ROW
 .opening-row {
 
     width: 90vw;
-    max-width: 1300px;
+    max-width: 1250px;
 
     display: flex;
 
-    gap: 24px;
-
     align-items: flex-start;
+
+    gap: 20px;
+}
+
+/* Blooms image */
+
+.large-series {
+
+    flex: 1.45;
+}
+
+/* Building image */
+
+.small-series {
+
+    flex: 0.9;
+}
+
+/* ---------------------------------
+VERTICAL SERIES
+--------------------------------- */
+
+.vertical-series {
+
+    width: 42vw;
+    max-width: 620px;
+    min-width: 280px;
 }
 
 /* ---------------------------------
@@ -197,26 +218,17 @@ SERIES
 .series {
 
     position: relative;
-
-    overflow: hidden;
 }
 
-/* Opening layout */
+/* ---------------------------------
+IMAGE WRAPPER
+--------------------------------- */
 
-.large-series {
-    flex: 1.4;
-}
+.series-frame {
 
-.small-series {
-    flex: 0.9;
-}
+    position: relative;
 
-/* Vertical stack */
-
-.vertical-series {
-
-    width: 42vw;
-    max-width: 620px;
+    width: 100%;
 }
 
 /* ---------------------------------
@@ -226,45 +238,64 @@ IMAGES
 .series-img {
 
     width: 100%;
-
-    display: none;
-
-    object-fit: contain;
-
-    transition:
-        opacity 0.45s ease,
-        transform 0.45s ease;
-}
-
-/* Active image */
-
-.series-img.active {
+    height: auto;
 
     display: block;
 
-    animation: fadeIn 0.4s ease;
+    object-fit: contain;
 }
 
-/* Hover */
+/* slideshow images */
 
-.series:hover .series-img.active {
+.slideshow-image {
 
-    transform: scale(1.008);
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+
+    transition: opacity 1s ease;
+
+    pointer-events: none;
+}
+
+/* active image */
+
+.slideshow-image.active {
+
+    opacity: 1;
+
+    position: relative;
+
+    pointer-events: auto;
 }
 
 /* ---------------------------------
-BUTTON
+HOVER
+--------------------------------- */
+
+.series:hover .series-img.active {
+
+    transform: scale(1.005);
+
+    transition: transform 0.4s ease;
+}
+
+/* ---------------------------------
+NEXT BUTTON
 --------------------------------- */
 
 .series-next {
 
     position: absolute;
 
-    bottom: 18px;
-    right: 18px;
+    bottom: 16px;
+    right: 16px;
 
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
 
     border: none;
 
@@ -272,11 +303,11 @@ BUTTON
 
     background: rgba(255,255,255,0.82);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
 
     cursor: pointer;
 
-    font-size: 16px;
+    font-size: 15px;
 
     opacity: 0;
 
@@ -284,22 +315,38 @@ BUTTON
 }
 
 .series:hover .series-next {
+
     opacity: 1;
 }
 
 /* ---------------------------------
-ANIMATION
+CAPTIONS
 --------------------------------- */
 
-@keyframes fadeIn {
+.caption {
+    margin-top: 8px;
 
-    from {
-        opacity: 0;
-    }
+    font-size: 10px;
+    letter-spacing: 0.05em;
 
-    to {
-        opacity: 1;
-    }
+    text-transform: uppercase;
+
+    color: rgba(0,0,0,0.45);
+}
+
+/* ---------------------------------
+TEXT BLOCKS
+--------------------------------- */
+
+.text-block {
+    padding: 30px 10px 30px 0;
+
+    max-width: 520px;
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    color: rgba(0,0,0,0.72);
 }
 
 /* ---------------------------------
@@ -311,30 +358,51 @@ RESPONSIVE
     .opening-row {
 
         flex-direction: column;
+
+        width: 92vw;
     }
 
     .vertical-series {
 
-        width: 90vw;
+        width: 92vw;
+    }
+
+    .large-series,
+    .small-series {
+
+        width: 100%;
     }
 }
 
 @media (max-width: 700px) {
 
+    .top-bar {
+        padding: 15px 18px;
+    }
+
+    .top-bar .tagline {
+        display: none;
+    }
+
+    .portfolio-title {
+        margin-top: 120px;
+
+        font-size: 3rem;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .portfolio-subtitle {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        margin-bottom: 60px;
+    }
+
     .gallery {
+
         gap: 70px;
-    }
-
-    .opening-row {
-
-        width: 92vw;
-
-        gap: 18px;
-    }
-
-    .vertical-series {
-
-        width: 92vw;
     }
 
     .series-next {
