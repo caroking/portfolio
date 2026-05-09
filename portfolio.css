@@ -1,4 +1,3 @@
-
 /* ---------------------------------
 GLOBAL
 --------------------------------- */
@@ -137,9 +136,9 @@ GALLERY LAYOUT
     flex-direction: column;
     align-items: center;
 
-    gap: 110px;
+    gap: 120px;
 
-    padding-bottom: 140px;
+    padding-bottom: 160px;
 }
 
 /* ---------------------------------
@@ -147,21 +146,21 @@ OPENING ROW
 --------------------------------- */
 
 .opening-row {
-    width: 90vw;
-    max-width: 1250px;
+    width: 92vw;
+    max-width: 1400px;
 
     display: flex;
-    gap: 20px;
+    gap: 24px;
 
     align-items: flex-start;
 }
 
 .large-series {
-    flex: 1.45;
+    flex: 1.6;
 }
 
 .small-series {
-    flex: 0.9;
+    flex: 1;
 }
 
 /* ---------------------------------
@@ -172,21 +171,25 @@ SERIES BLOCKS
     position: relative;
     cursor: pointer;
     overflow: hidden;
+
+    /* IMPORTANT: gives images room to breathe */
+    width: 100%;
 }
 
+/* THIS is what makes everything feel bigger */
 .vertical-series {
-    width: 42vw;
-    max-width: 620px;
-    min-width: 280px;
+    width: 92vw;
+    max-width: 1100px;
 }
 
 /* ---------------------------------
-SLIDESHOW IMAGES (FIXED SYSTEM)
+SLIDESHOW IMAGES
 --------------------------------- */
 
 .series-img {
     width: 100%;
     height: auto;
+
     display: none;
 }
 
@@ -196,36 +199,10 @@ SLIDESHOW IMAGES (FIXED SYSTEM)
 
 /* subtle hover feedback */
 .series:hover .series-img.active {
-    transform: scale(1.01);
+    transform: scale(1.015);
     transition: transform 0.4s ease;
 }
-.vertical-series {
-    width: 42vw;
-    max-width: 620px;
-    min-width: 280px;
 
-    /* KEY FIX */
-    aspect-ratio: 4 / 5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* make images fill a stable visual frame */
-.vertical-series .series-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* OPENING ROW gets slightly more “editorial weight” */
-.large-series {
-    aspect-ratio: 4 / 3;
-}
-
-.small-series {
-    aspect-ratio: 4 / 5;
-}
 /* ---------------------------------
 RESPONSIVE
 --------------------------------- */
@@ -260,6 +237,6 @@ RESPONSIVE
     }
 
     .gallery {
-        gap: 70px;
+        gap: 80px;
     }
 }
