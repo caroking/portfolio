@@ -163,8 +163,9 @@ GALLERY
 
     display: flex;
     flex-direction: column;
+    align-items: center;
 
-    gap: 120px;
+    gap: 42px;
 
     padding-bottom: 140px;
 }
@@ -175,10 +176,9 @@ SERIES
 
 .series {
 
-    width: 90vw;
-    max-width: 1400px;
-
-    margin: 0 auto;
+    width: 38vw;
+    max-width: 560px;
+    min-width: 280px;
 
     cursor: pointer;
 
@@ -192,6 +192,7 @@ SERIES IMAGES
 .series-cover {
 
     width: 100%;
+    height: auto;
 
     display: block;
 
@@ -199,23 +200,18 @@ SERIES IMAGES
 
     transition:
         transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-        opacity 0.3s ease,
-        filter 0.3s ease;
+        opacity 0.3s ease;
 
     will-change: transform;
-
-    image-rendering: auto;
 }
 
 /* Hover */
 
 .series:hover .series-cover {
 
-    transform: scale(1.01);
+    transform: scale(1.015);
 
-    opacity: 0.98;
-
-    filter: brightness(1.01);
+    opacity: 0.96;
 }
 
 /* ---------------------------------
@@ -324,71 +320,19 @@ ARROWS
 }
 
 /* ---------------------------------
-CAPTIONS
---------------------------------- */
-
-.caption {
-    margin-top: 8px;
-
-    font-size: 10px;
-    letter-spacing: 0.05em;
-
-    text-transform: uppercase;
-
-    color: rgba(0,0,0,0.45);
-}
-
-/* ---------------------------------
-TEXT BLOCKS
---------------------------------- */
-
-.text-block {
-    padding: 30px 10px 30px 0;
-
-    max-width: 520px;
-
-    font-size: 1rem;
-    line-height: 1.7;
-
-    color: rgba(0,0,0,0.72);
-}
-
-/* ---------------------------------
 RESPONSIVE
 --------------------------------- */
 
 @media (max-width: 700px) {
 
-    .top-bar {
-        padding: 15px 18px;
-    }
-
-    .top-bar .tagline {
-        display: none;
-    }
-
-    .portfolio-title {
-        margin-top: 120px;
-
-        font-size: 3rem;
-
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .portfolio-subtitle {
-        padding-left: 20px;
-        padding-right: 20px;
-
-        margin-bottom: 60px;
-    }
-
     .gallery {
-        gap: 70px;
+        gap: 26px;
     }
 
     .series {
-        width: 94vw;
+
+        width: 88vw;
+        min-width: unset;
     }
 
     .lightbox-img {
@@ -398,12 +342,14 @@ RESPONSIVE
 
     .prev,
     .next {
+
         font-size: 38px;
 
         padding: 12px;
     }
 
     .close {
+
         font-size: 34px;
 
         right: 20px;
