@@ -240,3 +240,43 @@ RESPONSIVE
         gap: 80px;
     }
 }
+
+/* ---------------------------------
+INVERT MODE
+--------------------------------- */
+
+body.invert-mode {
+    background: #111;
+    color: #f7f7f4;
+
+    transition:
+        background 0.5s ease,
+        color 0.5s ease;
+}
+
+/* top bar */
+
+body.invert-mode .top-bar {
+    background: rgba(17,17,17,0.92);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* links + text */
+
+body.invert-mode .top-bar a,
+body.invert-mode .portfolio-title,
+body.invert-mode .tagline {
+    color: #f7f7f4;
+}
+
+/* optional subtle image shift */
+
+body.invert-mode .series-img {
+    filter: brightness(0.96);
+}
+
+/* title cursor */
+
+.portfolio-title {
+    cursor: pointer;
+}
