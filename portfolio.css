@@ -302,3 +302,47 @@ body.invert-mode .series-img {
 .portfolio-title {
     cursor: pointer;
 }
+/* ---------------------------------
+BOTTOM IMAGE WALL
+--------------------------------- */
+
+.contact-sheet {
+
+    width: 94vw;
+
+    margin: 160px auto 120px auto;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    align-items: flex-start;
+}
+
+/* images */
+
+.contact-sheet img {
+
+    height: 180px;
+
+    width: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+/* hover */
+
+.contact-sheet img:hover {
+
+    transform: scale(1.02);
+
+    opacity: 0.92;
+}
